@@ -177,3 +177,57 @@ p {
     font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.3);
 }
+/* ================= FORM CLEAN LAYOUT ================= */
+.form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 90px;
+    resize: none;
+}
+
+/* CHECKBOX GROUP */
+.checkbox-group {
+    background: #f4f6fb;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #0a1a2f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #122a4d;
+}
