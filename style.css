@@ -1,16 +1,25 @@
-/* GLOBAL */
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
     background: #0b1f3a;
     color: #fff;
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
+    height: 75vh;
+    background: url('https://images.unsplash.com/photo-1608889175151-6c8e0f0c6d5a') center/cover no-repeat;
     position: relative;
-    height: 70vh;
-    background: url('https://images.unsplash.com/photo-1608889175151-6c8e0f0c6d5a') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,98 +36,186 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
+    padding: 20px;
 }
 
-.hero h1 {
-    font-size: 40px;
+.hero-content h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    color: gold;
 }
 
-.hero p {
-    font-size: 18px;
+.hero-content h2 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.hero-content p {
+    margin-top: 8px;
     opacity: 0.9;
 }
 
+/* =========================
+   BUTTONS
+========================= */
 .hero-buttons {
     margin-top: 20px;
 }
 
 .btn {
+    display: inline-block;
     padding: 12px 20px;
     margin: 5px;
     border-radius: 30px;
     text-decoration: none;
-    display: inline-block;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .primary {
     background: gold;
-    color: black;
+    color: #000;
 }
 
 .secondary {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid #fff;
+    color: #fff;
 }
 
-/* SECTIONS */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
 section {
-    padding: 50px 20px;
-    max-width: 1000px;
+    padding: 60px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
+/* =========================
+   HEADINGS
+========================= */
 h2 {
     text-align: center;
     margin-bottom: 30px;
     color: gold;
 }
 
-/* GRID */
+h3 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about-business {
+    background: #ffffff;
+    color: #222;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-left: 6px solid gold;
+}
+
+.about-business ul {
+    margin: 10px 0 10px 20px;
+}
+
+.about-business .highlight {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5f9ff;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #0b3d91;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* CARDS */
+/* =========================
+   PRODUCT CARDS
+========================= */
 .card {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #222;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
     transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .card:hover {
     transform: translateY(-8px);
 }
 
+.card h3 {
+    color: #0b3d91;
+}
+
 .price {
+    margin: 10px 0;
     font-weight: bold;
     color: #0b3d91;
 }
 
+/* =========================
+   BUTTONS INSIDE CARDS
+========================= */
 button {
-    margin-top: 10px;
-    padding: 10px;
+    padding: 10px 15px;
     border: none;
     background: #0b3d91;
-    color: white;
+    color: #fff;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
     background: gold;
-    color: black;
+    color: #000;
 }
 
-/* FOOTER */
+/* =========================
+   CONTACT
+========================= */
+#contact {
+    text-align: center;
+    background: #06142b;
+    border-radius: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 20px;
-    background: #06142b;
+    background: #050f1f;
+    margin-top: 40px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
 }
