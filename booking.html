@@ -12,17 +12,15 @@
     <h1>Book a Service</h1>
 </header>
 
-<section class="form-section">
+<section class="form-grid">
 
-    <!-- ------------------------------- -->
-    <!-- 📌 LAUNDRY BOOKING FORM         -->
-    <!-- ------------------------------- -->
-    <h2>Laundry Booking Form</h2>
-    <p>Please complete the form below to book your laundry service.</p>
+    <!-- LEFT: LAUNDRY -->
+    <div class="form-card">
+        <h2>Laundry Booking Form</h2>
+        <p>Please complete the form below to book your laundry service.</p>
 
-    <form class="bep-form">
+        <form class="bep-form">
 
-        <div class="form-row">
             <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" required>
@@ -32,40 +30,73 @@
                 <label>Phone Number</label>
                 <input type="tel" required>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label>Email Address (optional)</label>
-            <input type="email">
-        </div>
+            <div class="form-group">
+                <label>Email Address (optional)</label>
+                <input type="email">
+            </div>
 
-        <div class="form-group">
-            <label>Select Basket Size</label>
-            <select required>
-                <option value="">Choose option</option>
-                <option>Small Basket – R110</option>
-                <option>Medium Basket – R150</option>
-                <option>Large Basket – R200</option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label>Select Basket Size</label>
+                <select required>
+                    <option value="">Choose option</option>
+                    <option>Small Basket – R110</option>
+                    <option>Medium Basket – R150</option>
+                    <option>Large Basket – R200</option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <label>Preferred Date</label>
-            <input type="date" required>
-        </div>
+            <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date" required>
+            </div>
 
-        <div class="form-group">
-            <label>Additional Notes</label>
-            <textarea placeholder="Any special instructions?"></textarea>
-        </div>
+            <div class="form-group">
+                <label>Additional Notes</label>
+                <textarea></textarea>
+            </div>
 
-        <button class="btn-primary">Submit Laundry Booking</button>
-    </form>
+            <button class="btn-primary">Submit Laundry Booking</button>
+        </form>
+    </div>
+
+    <!-- RIGHT: WINTER ESSENTIALS -->
+    <div class="form-card">
+        <h2>Winter Essentials Order Form</h2>
+        <p>Select items and we will confirm via WhatsApp.</p>
+
+        <form class="bep-form">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label>WhatsApp Number</label>
+                <input type="tel" required>
+            </div>
+
+            <h3>Choose Items</h3>
+
+            <div class="form-checkbox-group">
+                <label class="checkbox-item"><input type="checkbox"> No-show Socks</label>
+                <label class="checkbox-item"><input type="checkbox"> Warm Gloves</label>
+                <label class="checkbox-item"><input type="checkbox"> Thick Long Socks</label>
+                <label class="checkbox-item"><input type="checkbox"> Beanies</label>
+                <label class="checkbox-item"><input type="checkbox"> Umbrellas</label>
+            </div>
+
+            <div class="form-group">
+                <label>Quantity & Notes</label>
+                <textarea></textarea>
+            </div>
+
+            <button class="btn-primary">Submit Winter Order</button>
+        </form>
+    </div>
 
 </section>
-
-
-<hr class="divider">
 
 
 <section class="form-section">
