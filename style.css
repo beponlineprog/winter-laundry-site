@@ -1,68 +1,96 @@
 /* ============================
-   BASIC GLOBAL STYLES
+   PREMIUM GLOBAL STYLE
 =============================== */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
-    background: #f5f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to bottom, #0b1f3a, #f5f7fa);
     color: #222;
-    line-height: 1.6;
-}
-
-header {
-    background: #0b3d91;
-    color: #fff;
-    text-align: center;
-    padding: 35px 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-header p {
-    margin-top: 8px;
-    font-size: 15px;
 }
 
 /* ============================
-   SECTION STYLES
+   HEADER (PREMIUM HERO)
 =============================== */
+
+header {
+    background: linear-gradient(135deg, #0b3d91, #1c5fb8);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ============================
+   SECTIONS (CARD LAYOUT)
+=============================== */
+
 section {
+    margin: 30px auto;
+    max-width: 900px;
     background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
 }
 
 h2 {
     color: #0b3d91;
-    margin-bottom: 10px;
-}
-
-.item {
-    background: #eef3f9;
-    margin: 12px 0;
-    padding: 12px;
-    border-radius: 8px;
+    border-left: 5px solid #d4af37;
+    padding-left: 10px;
 }
 
 /* ============================
-   CONTACT & FOOTER
+   PRODUCT / SERVICE CARDS
 =============================== */
 
-#contact p {
-    margin: 5px 0;
+.item {
+    background: #f0f4ff;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border-left: 4px solid #0b3d91;
 }
+
+.item:hover {
+    background: #e6efff;
+    transform: scale(1.02);
+}
+
+/* ============================
+   CONTACT
+=============================== */
+
+#contact {
+    text-align: center;
+}
+
+/* ============================
+   FOOTER
+=============================== */
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     background: #0b3d91;
     color: white;
-    margin-top: 20px;
+    margin-top: 40px;
 }
