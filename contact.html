@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us – Cozy Threads</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – Cozy Threads</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
-
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="booking.html">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HERO -->
-<section class="contact-hero">
+<!-- ================= HEADER ================= -->
+<header class="page-header">
     <h1>Contact Us</h1>
-    <p>For more information please feel free to contact us.</p>
+    <p>We’re here to help you anytime</p>
+</header>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+
+    <div class="contact-grid">
+
+        <!-- PHONE -->
+        <div class="contact-card">
+            <h3>📞 Call / WhatsApp</h3>
+            <p>078 819 0578</p>
+
+            <a class="contact-btn"
+               href="https://wa.me/27788190578"
+               target="_blank">
+               Message on WhatsApp
+            </a>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>thulim.belina@gmail.com</p>
+
+            <a class="contact-btn"
+               href="mailto:thulim.belina@gmail.com">
+               Send Email
+            </a>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="contact-card">
+            <h3>📍 Location</h3>
+            <p>35446 Ndumo Street<br>Etwatwa, 1519</p>
+
+            <a class="contact-btn"
+               href="https://www.google.com/maps"
+               target="_blank">
+               Open Map
+            </a>
+        </div>
+
+    </div>
+
+    <!-- EXTRA INFO -->
+    <div class="contact-info-box">
+        <h2>For More Information</h2>
+        <p>
+            Please feel free to contact us anytime for orders,
+            bookings, or inquiries. We are always ready to assist you.
+        </p>
+    </div>
+
 </section>
 
-<!-- CONTACT BOX -->
-<div class="contact-section">
-
-    <h2 class="contact-title">We're Here to Help</h2>
-
-    <div class="contact-item">
-        <i class="fa-brands fa-whatsapp"></i>
-        WhatsApp or Call: <strong>078 819 0578</strong>
-    </div>
-
-    <div class="contact-item">
-        <i class="fa-solid fa-envelope"></i>
-        Email: <strong>thulim.belina@gmail.com</strong>
-    </div>
-
-    <div class="contact-item">
-        <i class="fa-solid fa-location-dot"></i>
-        Location: <strong>35446 Ndumo Street, Etwatwa, 1519</strong>
-    </div>
-
-    <div class="contact-buttons">
-        <a href="https://wa.me/27788190578" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
-        <a href="mailto:thulim.belina@gmail.com" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Email Us</a>
-        <a href="https://maps.app.goo.gl/" class="btn btn-primary"><i class="fa-solid fa-location-dot"></i> View Location</a>
-    </div>
-</div>
-
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
     <div class="footer-container">
         <h3>Cozy Threads</h3>
-        <p>Winter Essentials & Laundry Services</p>
 
         <div class="footer-links">
             <a href="index.html">Home</a>
