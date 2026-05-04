@@ -349,3 +349,93 @@ footer {
     border: none;
     border-top: 2px solid #e3e3e3;
 }
+/* -----------------------------------
+   2 COLUMN FORM LAYOUT
+----------------------------------- */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Card wrapper */
+.form-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+.form-card h2 {
+    color: #0a1a2f;
+    margin-bottom: 10px;
+}
+
+/* FORM FIELDS */
+.bep-form {
+    margin-top: 15px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    font-size: 15px;
+}
+
+/* CHECKBOX AREA */
+.form-checkbox-group {
+    background: #f5f7fa;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+/* BUTTON */
+.btn-primary {
+    background: #0a1a2f;
+    color: white;
+    border: none;
+    padding: 13px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background: #122a4d;
+}
+
+/* -----------------------------------
+   RESPONSIVE (MOBILE)
+----------------------------------- */
+@media (max-width: 900px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
