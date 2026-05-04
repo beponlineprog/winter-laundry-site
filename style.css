@@ -425,15 +425,11 @@ hr {
     color: #0a1a2f;
 }
 /* ================= HERO BANNER BACKGROUND ================= */
-.hero {
-    height: 70vh;
-    background: url("images/banner.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    color: white;
+.hero-banner {
+  background-image: url("banner.jpg");
+  height: 200px;   /* SMALL SIZE */
+  background-size: cover;
+  background-position: center;
 }
 
 /* DARK OVERLAY FOR READABILITY */
