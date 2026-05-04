@@ -1,276 +1,86 @@
 /* ============================================
-   GLOBAL STYLES
+   CONTACT PAGE – PREMIUM DESIGN
 =============================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: "Poppins", Arial, sans-serif;
-    background: #f4f6fa;
-    color: #222;
-    line-height: 1.6;
-}
-
-/* Smooth spacing for all pages */
-section {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* ============================================
-   NAVBAR
-=============================================== */
-.navbar {
-    background: #0b3d91;
-    color: white;
-    padding: 18px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
-
-.navbar h2 {
-    font-size: 22px;
-    letter-spacing: 1px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin-left: 18px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: #ffd75e;
-}
-
-/* ============================================
-   HERO (for index)
-=============================================== */
-.hero {
-    background: linear-gradient(to bottom right, #0b3d91, #122b57);
-    color: white;
-    padding: 70px 25px;
+.contact-heading {
     text-align: center;
-}
-
-.hero h1 {
-    font-size: 42px;
+    font-size: 32px;
+    color: #0b3d91;
     font-weight: 700;
 }
 
-.hero p {
+.contact-sub {
+    text-align: center;
     margin-top: 10px;
+    color: #444;
+    font-size: 16px;
+}
+
+.contact-details-box {
+    background: white;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e9f2;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.contact-row .icon {
+    font-size: 26px;
+    margin-right: 15px;
+}
+
+.contact-row p {
     font-size: 18px;
+    color: #222;
 }
 
 /* BUTTONS */
-.btn {
+.contact-buttons {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.contact-btn {
     display: inline-block;
-    padding: 12px 22px;
-    background: #ffd75e;
-    color: #333;
+    padding: 14px 25px;
     border-radius: 8px;
     text-decoration: none;
-    margin-top: 18px;
     font-weight: 600;
+    margin: 10px;
+    font-size: 16px;
     transition: 0.3s;
 }
 
-.btn:hover {
+/* WhatsApp */
+.contact-btn.whatsapp {
+    background: #25D366;
+    color: white;
+}
+.contact-btn.whatsapp:hover {
+    background: #1ebe5c;
+}
+
+/* Email */
+.contact-btn.email {
+    background: #ffd75e;
+    color: #333;
+}
+.contact-btn.email:hover {
     background: #f5c94d;
 }
 
-/* ============================================
-   CARDS / SECTIONS
-=============================================== */
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    border: 1px solid #e5e9f2;
-}
-
-.card h2 {
-    color: #0b3d91;
-    margin-bottom: 10px;
-}
-
-.card p {
-    margin-bottom: 8px;
-}
-
-/* ============================================
-   ABOUT PAGE — TITLES
-=============================================== */
-.about-title {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.about-title h1 {
-    font-size: 34px;
-    color: #0b3d91;
-}
-
-.about-title p {
-    color: #555;
-    margin-top: 8px;
-}
-
-/* About Page Cards */
-.about-card {
-    background: #ffffff;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    border: 1px solid #e5e9f2;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.05);
-}
-
-.about-card p {
-    margin-bottom: 12px;
-    color: #444;
-}
-
-/* ============================================
-   SPLIT COLUMNS (Winter Essentials + Laundry)
-=============================================== */
-.split-columns {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.column-box {
-    flex: 1;
-    min-width: 320px;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #e5e9f2;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.column-box h2 {
-    color: #0b3d91;
-    margin-bottom: 12px;
-}
-
-.column-box ul li {
-    margin-bottom: 8px;
-    list-style: none;
-    padding-left: 15px;
-    position: relative;
-}
-
-.column-box ul li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #0b3d91;
-    font-size: 18px;
-}
-
-/* ============================================
-   HIGHLIGHT BOX
-=============================================== */
-.about-highlight {
+/* Location */
+.contact-btn.location {
     background: #0b3d91;
     color: white;
-    padding: 30px 25px;
-    border-radius: 12px;
-    margin-top: 35px;
-    box-shadow: 0 3px 14px rgba(0,0,0,0.15);
 }
-
-.about-highlight h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.about-highlight ul {
-    margin-bottom: 18px;
-    padding-left: 20px;
-}
-
-.closing-line {
-    margin-top: 15px;
-    font-weight: 600;
-}
-
-/* ============================================
-   SERVICES PAGE — CARD GRID
-=============================================== */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding-top: 15px;
-}
-
-.service-box {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #e5e9f2;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    text-align: center;
-}
-
-.service-box h3 {
-    color: #0b3d91;
-    margin-bottom: 10px;
-}
-
-.service-box p {
-    margin-bottom: 8px;
-}
-
-/* ============================================
-   CONTACT PAGE
-=============================================== */
-.contact-wrapper {
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    border: 1px solid #e5e9f2;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.contact-wrapper h2 {
-    color: #0b3d91;
-    margin-bottom: 12px;
-}
-
-.contact-wrapper p {
-    margin-bottom: 10px;
-}
-
-.contact-detail {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-/* ============================================
-   FOOTER
-=============================================== */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #0b3d91;
-    color: white;
-    margin-top: 40px;
-    font-size: 14px;
+.contact-btn.location:hover {
+    background: #092c6b;
 }
