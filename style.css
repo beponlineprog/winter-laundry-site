@@ -1,18 +1,29 @@
 /* -----------------------------------
-   GLOBAL STYLES
+   RESET + GLOBAL FIX (ALL PAGES)
 ----------------------------------- */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
+    background: #fff;
     color: #333;
     line-height: 1.6;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+section {
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
 }
 
 /* -----------------------------------
@@ -25,21 +36,12 @@ img {
     padding: 15px 25px;
     background: #0d47a1;
     color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar .logo {
-    font-size: 20px;
-    font-weight: bold;
 }
 
 .navbar nav a {
     color: #fff;
-    margin-left: 20px;
+    margin-left: 15px;
     text-decoration: none;
-    font-weight: 500;
 }
 
 .navbar nav a:hover {
@@ -47,56 +49,42 @@ img {
 }
 
 /* -----------------------------------
-   HERO BANNER 
+   HERO BANNER
 ----------------------------------- */
 .hero-banner {
-    background-image: url("banner.png");  /* PNG in ROOT */
-    height: 200px;                        /* Small banner */
+    background-image: url("banner.png");
+    height: 200px;
     background-size: cover;
     background-position: center;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .overlay {
+    background: rgba(0,0,0,0.35);
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.35);
+    color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    color: white;
+    align-items: center;
     text-align: center;
-}
-
-.overlay h1 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.overlay p {
-    font-size: 16px;
-    margin-top: 5px;
 }
 
 /* -----------------------------------
    CONTENT
 ----------------------------------- */
 .content {
-    padding: 30px 20px;
+    max-width: 1100px;
+    margin: auto;
     text-align: center;
 }
 
-.content h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
-}
-
-/* FOOTER */
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
 .footer {
     background: #0d47a1;
     color: white;
@@ -119,18 +107,17 @@ img {
 }
 
 .footer-column h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
     border-bottom: 2px solid white;
     display: inline-block;
     padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .footer-column a,
 .footer-column p {
-    display: block;
-    color: #e3e3e3;
+    color: #ddd;
     text-decoration: none;
+    display: block;
     margin: 6px 0;
     font-size: 14px;
 }
@@ -141,42 +128,8 @@ img {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
     padding-top: 10px;
     font-size: 13px;
-    border-top: 1px solid rgba(255,255,255,0.3);
-}
-/* -----------------------------------
-   GLOBAL SPACING RESET (FIX ALL PAGES)
------------------------------------ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    line-height: 1.6;
-    background: #fff;
-    color: #333;
-}
-
-/* Consistent page spacing */
-section {
-    padding: 40px 20px;
-}
-
-/* Fix headings spacing */
-h1, h2, h3 {
-    margin-bottom: 10px;
-}
-
-/* Paragraph spacing */
-p {
-    margin-bottom: 10px;
-}
-.content {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
 }
