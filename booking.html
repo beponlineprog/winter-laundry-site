@@ -1,161 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking – BEP Essentials & Laundry</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking System</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Book a Service</h1>
+<nav>
+    <div class="logo">Cozy Threads</div>
+</nav>
+
+<header class="page-header">
+    <h1>Booking System</h1>
+    <p>Choose a service below</p>
 </header>
 
 <section class="form-grid">
 
-    <!-- LEFT: LAUNDRY -->
+    <!-- ================= LAUNDRY FORM ================= -->
     <div class="form-card">
-        <h2>Laundry Booking Form</h2>
-        <p>Please complete the form below to book your laundry service.</p>
+        <h2>🧺 Laundry Booking</h2>
 
-        <form class="bep-form">
+        <input id="l_name" type="text" placeholder="Full Name" required>
+        <input id="l_phone" type="tel" placeholder="Phone Number" required>
+        <input id="l_email" type="email" placeholder="Email (optional)">
 
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" required>
-            </div>
+        <select id="l_service">
+            <option>Small Basket – R110</option>
+            <option>Medium Basket – R150</option>
+            <option>Large Basket – R200</option>
+            <option>Wash Only</option>
+            <option>Wash & Fold</option>
+            <option>Wash, Fold & Iron</option>
+        </select>
 
-            <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" required>
-            </div>
+        <input id="l_date" type="date">
 
-            <div class="form-group">
-                <label>Email Address (optional)</label>
-                <input type="email">
-            </div>
+        <textarea id="l_notes" placeholder="Additional notes"></textarea>
 
-            <div class="form-group">
-                <label>Select Basket Size</label>
-                <select required>
-                    <option value="">Choose option</option>
-                    <option>Small Basket – R110</option>
-                    <option>Medium Basket – R150</option>
-                    <option>Large Basket – R200</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>Preferred Date</label>
-                <input type="date" required>
-            </div>
-
-            <div class="form-group">
-                <label>Additional Notes</label>
-                <textarea></textarea>
-            </div>
-
-            <button class="btn-primary">Submit Laundry Booking</button>
-        </form>
+        <button onclick="sendLaundry()" class="btn">Submit Laundry Booking</button>
     </div>
 
-    <!-- RIGHT: WINTER ESSENTIALS -->
+    <!-- ================= WINTER FORM ================= -->
     <div class="form-card">
-        <h2>Winter Essentials Order Form</h2>
-        <p>Select items and we will confirm via WhatsApp.</p>
+        <h2>❄ Winter Essentials Order</h2>
 
-        <form class="bep-form">
+        <input id="w_name" type="text" placeholder="Full Name" required>
+        <input id="w_phone" type="tel" placeholder="WhatsApp Number" required>
 
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" required>
-            </div>
+        <div class="check-group">
+            <label><input class="w_item" type="checkbox" value="No-show Socks"> No-show Socks</label>
+            <label><input class="w_item" type="checkbox" value="Warm Gloves"> Warm Gloves</label>
+            <label><input class="w_item" type="checkbox" value="Thick Long Socks"> Thick Long Socks</label>
+            <label><input class="w_item" type="checkbox" value="Beanies"> Beanies</label>
+            <label><input class="w_item" type="checkbox" value="Umbrellas"> Umbrellas</label>
+        </div>
 
-            <div class="form-group">
-                <label>WhatsApp Number</label>
-                <input type="tel" required>
-            </div>
+        <textarea id="w_notes" placeholder="Quantity & Notes"></textarea>
 
-            <h3>Choose Items</h3>
-
-            <div class="form-checkbox-group">
-                <label class="checkbox-item"><input type="checkbox"> No-show Socks</label>
-                <label class="checkbox-item"><input type="checkbox"> Warm Gloves</label>
-                <label class="checkbox-item"><input type="checkbox"> Thick Long Socks</label>
-                <label class="checkbox-item"><input type="checkbox"> Beanies</label>
-                <label class="checkbox-item"><input type="checkbox"> Umbrellas</label>
-            </div>
-
-            <div class="form-group">
-                <label>Quantity & Notes</label>
-                <textarea></textarea>
-            </div>
-
-            <button class="btn-primary">Submit Winter Order</button>
-        </form>
+        <button onclick="sendWinter()" class="btn">Submit Winter Order</button>
     </div>
 
 </section>
 
+<!-- ================= SCRIPT ================= -->
+<script>
+function sendLaundry() {
+    let msg =
+`🧺 LAUNDRY BOOKING
+Name: ${l_name.value}
+Phone: ${l_phone.value}
+Email: ${l_email.value}
+Service: ${l_service.value}
+Date: ${l_date.value}
+Notes: ${l_notes.value}`;
 
-<section class="form-section">
-    <!-- ------------------------------- -->
-    <!-- ❄ WINTER ESSENTIALS ORDER FORM -->
-    <!-- ------------------------------- -->
-    <h2>Winter Essentials Order Form</h2>
-    <p>Select the items you need and we will confirm your order via WhatsApp.</p>
+    window.open("https://wa.me/27788190578?text=" + encodeURIComponent(msg));
+}
 
-    <form class="bep-form">
+function sendWinter() {
 
-        <div class="form-row">
-            <div class="form-group">
-                <label>Full Name</label>
-                <input type="text" required>
-            </div>
+    let items = [];
+    document.querySelectorAll(".w_item:checked")
+    .forEach(i => items.push(i.value));
 
-            <div class="form-group">
-                <label>WhatsApp Number</label>
-                <input type="tel" required>
-            </div>
-        </div>
+    let msg =
+`❄ WINTER ORDER
+Name: ${w_name.value}
+Phone: ${w_phone.value}
+Items:
+- ${items.join("\n- ")}
+Notes: ${w_notes.value}`;
 
-        <h3>Choose Items</h3>
-
-        <div class="form-checkbox-group">
-
-            <label class="checkbox-item">
-                <input type="checkbox"> No-show Socks — 3 for R35 / 1 for R15
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox"> Warm Gloves — 3 for R45 / 1 for R20
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox"> Thick Long Socks — 3 for R60 / 1 for R30
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox"> Beanies — 3 for R45 / 1 for R20
-            </label>
-
-            <label class="checkbox-item">
-                <input type="checkbox"> Umbrellas — R50 each
-            </label>
-
-        </div>
-
-        <div class="form-group">
-            <label>Quantity & Notes</label>
-            <textarea placeholder="Tell us how many items you want of each"></textarea>
-        </div>
-
-        <button class="btn-primary">Submit Winter Essentials Order</button>
-
-    </form>
-
-</section>
+    window.open("https://wa.me/27788190578?text=" + encodeURIComponent(msg));
+}
+</script>
 
 </body>
 </html>
