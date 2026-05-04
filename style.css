@@ -1,96 +1,124 @@
-/* ============================
-   PREMIUM GLOBAL STYLE
-=============================== */
-
+/* GLOBAL */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(to bottom, #0b1f3a, #f5f7fa);
-    color: #222;
+    background: #0b1f3a;
+    color: #fff;
 }
 
-/* ============================
-   HEADER (PREMIUM HERO)
-=============================== */
-
-header {
-    background: linear-gradient(135deg, #0b3d91, #1c5fb8);
-    color: white;
+/* HERO */
+.hero {
+    position: relative;
+    height: 70vh;
+    background: url('https://images.unsplash.com/photo-1608889175151-6c8e0f0c6d5a') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 70px 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-header h1 {
-    font-size: 36px;
-    margin: 0;
-    letter-spacing: 1px;
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
 }
 
-header p {
-    margin-top: 10px;
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
     font-size: 18px;
     opacity: 0.9;
 }
 
-/* ============================
-   SECTIONS (CARD LAYOUT)
-=============================== */
-
-section {
-    margin: 30px auto;
-    max-width: 900px;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+.hero-buttons {
+    margin-top: 20px;
 }
 
-section:hover {
-    transform: translateY(-5px);
+.btn {
+    padding: 12px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.primary {
+    background: gold;
+    color: black;
+}
+
+.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+/* SECTIONS */
+section {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 h2 {
-    color: #0b3d91;
-    border-left: 5px solid #d4af37;
-    padding-left: 10px;
-}
-
-/* ============================
-   PRODUCT / SERVICE CARDS
-=============================== */
-
-.item {
-    background: #f0f4ff;
-    margin: 12px 0;
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-    border-left: 4px solid #0b3d91;
-}
-
-.item:hover {
-    background: #e6efff;
-    transform: scale(1.02);
-}
-
-/* ============================
-   CONTACT
-=============================== */
-
-#contact {
     text-align: center;
+    margin-bottom: 30px;
+    color: gold;
 }
 
-/* ============================
-   FOOTER
-=============================== */
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
+/* CARDS */
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.price {
+    font-weight: bold;
+    color: #0b3d91;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #0b3d91;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: gold;
+    color: black;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: #0b3d91;
-    color: white;
-    margin-top: 40px;
+    background: #06142b;
 }
