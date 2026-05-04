@@ -1,111 +1,276 @@
-body {
+/* ============================================
+   GLOBAL STYLES
+=============================================== */
+* {
     margin: 0;
-    font-family: Arial;
-    background: #0b1f3a;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* NAV */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f6fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Smooth spacing for all pages */
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ============================================
+   NAVBAR
+=============================================== */
 .navbar {
+    background: #0b3d91;
+    color: white;
+    padding: 18px 25px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    background: #06142b;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 
 .navbar h2 {
-    color: gold;
+    font-size: 22px;
+    letter-spacing: 1px;
 }
 
 .navbar a {
     color: white;
-    margin-left: 10px;
     text-decoration: none;
+    margin-left: 18px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* HERO */
+.navbar a:hover,
+.navbar a.active {
+    color: #ffd75e;
+}
+
+/* ============================================
+   HERO (for index)
+=============================================== */
 .hero {
-    height: 70vh;
-    background: url('https://images.unsplash.com/photo-1608889175151-6c8e0f0c6d5a') center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
-
-.hero-content {
-    position: relative;
+    background: linear-gradient(to bottom right, #0b3d91, #122b57);
+    color: white;
+    padding: 70px 25px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 40px;
-    color: gold;
+    font-size: 42px;
+    font-weight: 700;
 }
 
-/* SECTIONS */
-section {
-    padding: 40px;
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 20px;
-}
-
-/* CARDS */
-.card {
-    background: white;
-    color: black;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.price {
-    color: #0b3d91;
-    font-weight: bold;
-}
-
-/* BUTTON */
-button, .btn {
-    padding: 10px;
-    background: #0b3d91;
-    color: white;
-    border: none;
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #ffd75e;
+    color: #333;
     border-radius: 8px;
     text-decoration: none;
+    margin-top: 18px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-button:hover, .btn:hover {
-    background: gold;
-    color: black;
+.btn:hover {
+    background: #f5c94d;
 }
 
-/* ABOUT */
-.about-business {
+/* ============================================
+   CARDS / SECTIONS
+=============================================== */
+.card {
     background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e5e9f2;
 }
 
-.highlight {
-    background: #f5f9ff;
-    padding: 10px;
-    font-weight: bold;
+.card h2 {
+    color: #0b3d91;
+    margin-bottom: 10px;
 }
 
-/* CONTACT */
-#contact {
+.card p {
+    margin-bottom: 8px;
+}
+
+/* ============================================
+   ABOUT PAGE — TITLES
+=============================================== */
+.about-title {
     text-align: center;
+    margin-bottom: 25px;
+}
+
+.about-title h1 {
+    font-size: 34px;
+    color: #0b3d91;
+}
+
+.about-title p {
+    color: #555;
+    margin-top: 8px;
+}
+
+/* About Page Cards */
+.about-card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e9f2;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.05);
+}
+
+.about-card p {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/* ============================================
+   SPLIT COLUMNS (Winter Essentials + Laundry)
+=============================================== */
+.split-columns {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.column-box {
+    flex: 1;
+    min-width: 320px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e9f2;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.column-box h2 {
+    color: #0b3d91;
+    margin-bottom: 12px;
+}
+
+.column-box ul li {
+    margin-bottom: 8px;
+    list-style: none;
+    padding-left: 15px;
+    position: relative;
+}
+
+.column-box ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0b3d91;
+    font-size: 18px;
+}
+
+/* ============================================
+   HIGHLIGHT BOX
+=============================================== */
+.about-highlight {
+    background: #0b3d91;
+    color: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    margin-top: 35px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.15);
+}
+
+.about-highlight h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.about-highlight ul {
+    margin-bottom: 18px;
+    padding-left: 20px;
+}
+
+.closing-line {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* ============================================
+   SERVICES PAGE — CARD GRID
+=============================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding-top: 15px;
+}
+
+.service-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e9f2;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.service-box h3 {
+    color: #0b3d91;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    margin-bottom: 8px;
+}
+
+/* ============================================
+   CONTACT PAGE
+=============================================== */
+.contact-wrapper {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #e5e9f2;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.contact-wrapper h2 {
+    color: #0b3d91;
+    margin-bottom: 12px;
+}
+
+.contact-wrapper p {
+    margin-bottom: 10px;
+}
+
+.contact-detail {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+=============================================== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0b3d91;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
 }
