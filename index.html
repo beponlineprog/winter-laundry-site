@@ -3,106 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cozy Threads | Winter Essentials & Laundry</title>
+<title>Cozy Threads</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<nav class="navbar">
+    <h2>COZY THREADS</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
 <header class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
         <h1>COZY THREADS</h1>
         <p>Comfort You Can Count On</p>
-        <h2>❄️ Winter Essentials & 🧺 Laundry Care</h2>
-        <p>Warmth • Comfort • Quality</p>
-
-        <div class="hero-buttons">
-            <a href="#about" class="btn primary">Learn More</a>
-            <a href="#shop" class="btn secondary">Shop Now</a>
-        </div>
+        <h2>❄️ Winter Essentials Store</h2>
+        <a href="#shop" class="btn primary">Shop Now</a>
     </div>
 </header>
 
-<!-- ABOUT SECTION -->
-<section id="about" class="about-business">
-
-    <h2>About Us</h2>
-
-    <p>
-        Welcome to <strong>Winter Essentials & Laundry Services</strong> – your trusted destination for everyday comfort, warmth, and care.
-        We are a proudly service-driven business dedicated to keeping you warm in winter and your clothes fresh, clean, and perfectly cared for all year round.
-        Our focus is simple: quality products, reliable service, and affordability you can count on.
-    </p>
-
-    <h3>❄️ Winter Essentials</h3>
-    <p>
-        Our winter collection is designed for comfort, durability, and everyday use:
-    </p>
-
-    <ul>
-        <li>Umbrellas for rainy weather</li>
-        <li>Beanies for warmth and style</li>
-        <li>No-show socks for comfort</li>
-        <li>Long socks for extra warmth</li>
-        <li>Gloves for cold protection</li>
-    </ul>
-
-    <h3>🧺 Laundry Services</h3>
-    <p>
-        We offer professional laundry care to make life easier:
-    </p>
-
-    <ul>
-        <li>Wash Only – clean and fresh laundry</li>
-        <li>Wash & Fold – neatly packed and ready</li>
-        <li>Wash, Fold & Iron – complete premium care</li>
-    </ul>
-
-    <h3>💙 Our Promise</h3>
-
-    <ul>
-        <li>Quality you can trust</li>
-        <li>Affordable pricing</li>
-        <li>Friendly service</li>
-        <li>Customer satisfaction first</li>
-    </ul>
-
-    <p class="highlight">
-        Stay warm. Stay fresh. Stay confident – with Cozy Threads.
-    </p>
-
-</section>
-
-<!-- SHOP SECTION -->
 <section id="shop">
-
-    <h2>❄️ Winter Essentials Store</h2>
+    <h2>Winter Essentials</h2>
 
     <div class="grid">
 
         <div class="card">
-            <h3>No-Show Socks</h3>
-            <p>Low cut • Comfortable • Secure fit</p>
-            <p class="price">3 pairs – R35 | 1 pair – R15</p>
-            <button onclick="order('No-Show Socks')">Order on WhatsApp</button>
+            <h3>Beanies</h3>
+            <p class="price">R20 each</p>
+            <button onclick="order('Beanie')">Order</button>
         </div>
 
         <div class="card">
-            <h3>Warm Gloves</h3>
-            <p>Soft • Stretchy • Warm</p>
-            <p class="price">3 pairs – R45 | 1 pair – R20</p>
-            <button onclick="order('Warm Gloves')">Order on WhatsApp</button>
+            <h3>Gloves</h3>
+            <p class="price">R20 / R45 set</p>
+            <button onclick="order('Gloves')">Order</button>
         </div>
 
         <div class="card">
-            <h3>Thick Long Socks</h3>
-            <p>Durable • Warm • Everyday comfort</p>
-            <p class="price">3 pairs – R60 | 1 pair – R30</p>
-            <button onclick="order('Thick Socks')">Order on WhatsApp</button>
+            <h3>Socks</h3>
+            <p class="price">R15–R60</p>
+            <button onclick="order('Socks')">Order</button>
         </div>
 
+        <div class="card">
+            <h3>Umbrellas</h3>
+            <p class="price">R50</p>
+            <button onclick="order('Umbrella')">Order</button>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function order(item){
+    let phone = "27878190578";
+    let msg = "Hello, I want to order: " + item;
+    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
         <div class="card">
             <h3>Beanies</h3>
             <p>Stylish • Warm • Soft</p>
