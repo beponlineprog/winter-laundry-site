@@ -1,77 +1,114 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Winter Essentials & Thuli’s Laundry</title>
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Winter Essentials & Thuli’s Laundry</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header>
-        <h1>Winter Essentials Sale & Thuli’s Laundry</h1>
-        <p>Your One-Stop Shop for Warm Clothing & Professional Laundry Care</p>
-    </header><!-- WINTER SALES SECTION -->
-<section id="winter-sales">
-    <h2>🔥 Winter Essentials Sale</h2>
-    <p>Warm, comfortable and affordable items to keep you cozy this winter.</p>
 
-    <div class="item">
-        <h3>No-Show Socks</h3>
-        <p>3 pairs – R35 | 1 pair – R15</p>
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>❄️ Winter Essentials & 🧺 Laundry Care</h1>
+        <p>Premium winter wear & professional laundry services at affordable prices</p>
+
+        <div class="hero-buttons">
+            <a href="#shop" class="btn primary">🛒 Shop Now</a>
+            <a href="#laundry" class="btn secondary">🧺 Laundry Services</a>
+        </div>
     </div>
+</header>
 
-    <div class="item">
-        <h3>Warm Gloves</h3>
-        <p>3 pairs – R45 | 1 pair – R20</p>
-    </div>
+<!-- SHOP SECTION -->
+<section id="shop">
+    <h2>❄️ Winter Essentials Store</h2>
 
-    <div class="item">
-        <h3>Thick Long Socks</h3>
-        <p>3 pairs – R60 | 1 pair – R30</p>
-    </div>
+    <div class="grid">
 
-    <div class="item">
-        <h3>Beanies</h3>
-        <p>3 for R45 | 1 for R20</p>
-    </div>
+        <div class="card">
+            <h3>No-Show Socks</h3>
+            <p class="price">R35 (3 pairs)</p>
+            <button onclick="order('No-Show Socks - R35')">Order on WhatsApp</button>
+        </div>
 
-    <div class="item">
-        <h3>Umbrellas</h3>
-        <p>R50 each</p>
+        <div class="card">
+            <h3>Warm Gloves</h3>
+            <p class="price">R45 (3 pairs)</p>
+            <button onclick="order('Warm Gloves - R45')">Order on WhatsApp</button>
+        </div>
+
+        <div class="card">
+            <h3>Thick Socks</h3>
+            <p class="price">R60 (3 pairs)</p>
+            <button onclick="order('Thick Socks - R60')">Order on WhatsApp</button>
+        </div>
+
+        <div class="card">
+            <h3>Beanies</h3>
+            <p class="price">R20 each</p>
+            <button onclick="order('Beanies - R20')">Order on WhatsApp</button>
+        </div>
+
+        <div class="card">
+            <h3>Umbrellas</h3>
+            <p class="price">R50 each</p>
+            <button onclick="order('Umbrella - R50')">Order on WhatsApp</button>
+        </div>
+
     </div>
 </section>
 
-<!-- LAUNDRY SECTION -->
+<!-- LAUNDRY -->
 <section id="laundry">
-    <h2>🧺 Thuli’s Laundry</h2>
-    <p>Your Clothes, Our Care — Fast, Fresh & Professionally Cleaned.</p>
+    <h2>🧺 Thuli’s Laundry Services</h2>
 
-    <div class="item">
-        <h3>Small Basket</h3>
-        <p>R110</p>
-    </div>
+    <div class="grid">
 
-    <div class="item">
-        <h3>Medium Basket</h3>
-        <p>R150</p>
-    </div>
+        <div class="card">
+            <h3>Small Basket</h3>
+            <p class="price">R110</p>
+            <button onclick="order('Laundry Small Basket - R110')">Book Service</button>
+        </div>
 
-    <div class="item">
-        <h3>Large Basket</h3>
-        <p>R200</p>
+        <div class="card">
+            <h3>Medium Basket</h3>
+            <p class="price">R150</p>
+            <button onclick="order('Laundry Medium Basket - R150')">Book Service</button>
+        </div>
+
+        <div class="card">
+            <h3>Large Basket</h3>
+            <p class="price">R200</p>
+            <button onclick="order('Laundry Large Basket - R200')">Book Service</button>
+        </div>
+
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Call / WhatsApp: <strong>078 819 0578</strong></p>
-    <p>📍 35446 Ndumo Street, Barcelona</p>
+    <h2>📞 Contact & Orders</h2>
+    <p>WhatsApp Orders: <strong>078 819 0578</strong></p>
+    <p>Location: 35446 Ndumo Street, Barcelona</p>
 </section>
 
 <footer>
-    <p>© 2024 Winter Essentials & Thuli’s Laundry</p>
+    <p>© 2026 Winter Essentials & Thuli’s Laundry</p>
 </footer>
+
+<!-- WHATSAPP SCRIPT -->
+<script>
+function order(item){
+    let phone = "27878190578";
+    let message = "Hello, I want to order: " + item;
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
