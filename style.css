@@ -146,3 +146,32 @@ img {
     font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.3);
 }
+/* -----------------------------------
+   GLOBAL SPACING RESET (FIX ALL PAGES)
+----------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+}
+
+/* Consistent page spacing */
+section {
+    padding: 40px 20px;
+}
+
+/* Fix headings spacing */
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 10px;
+}
