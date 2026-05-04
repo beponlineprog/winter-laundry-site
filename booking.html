@@ -3,24 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Booking System</title>
+<title>Booking System – Cozy Threads</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav>
     <div class="logo">Cozy Threads</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </nav>
 
+<!-- ================= HEADER ================= -->
 <header class="page-header">
     <h1>Booking System</h1>
-    <p>Choose a service below</p>
+    <p>Book Laundry or Order Winter Essentials</p>
 </header>
 
+<!-- ================= FORMS ================= -->
 <section class="form-grid">
 
-    <!-- ================= LAUNDRY FORM ================= -->
+    <!-- LAUNDRY FORM -->
     <div class="form-card">
         <h2>🧺 Laundry Booking</h2>
 
@@ -38,13 +48,12 @@
         </select>
 
         <input id="l_date" type="date">
-
         <textarea id="l_notes" placeholder="Additional notes"></textarea>
 
-        <button onclick="sendLaundry()" class="btn">Submit Laundry Booking</button>
+        <button class="btn" onclick="sendLaundry()">Submit Laundry Booking</button>
     </div>
 
-    <!-- ================= WINTER FORM ================= -->
+    <!-- WINTER FORM -->
     <div class="form-card">
         <h2>❄ Winter Essentials Order</h2>
 
@@ -61,10 +70,20 @@
 
         <textarea id="w_notes" placeholder="Quantity & Notes"></textarea>
 
-        <button onclick="sendWinter()" class="btn">Submit Winter Order</button>
+        <button class="btn" onclick="sendWinter()">Submit Winter Order</button>
     </div>
 
 </section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+        <h3>Cozy Threads</h3>
+        <p>Winter Essentials & Laundry Services</p>
+        <p>📞 078 819 0578 | 📍 Etwatwa, 1519</p>
+        <p>© 2026 All Rights Reserved</p>
+    </div>
+</footer>
 
 <!-- ================= SCRIPT ================= -->
 <script>
