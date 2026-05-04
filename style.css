@@ -1,439 +1,91 @@
-/* -----------------------------------
-   GLOBAL STYLES
------------------------------------ */
+/* ================= GLOBAL ================= */
 body {
     margin: 0;
-    font-family: "Poppins", Arial, sans-serif;
-    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
     color: #222;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-h1, h2, h3 {
-    font-weight: 600;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* -----------------------------------
-   NAVIGATION
------------------------------------ */
 nav {
     background: #0a1a2f;
-    padding: 12px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #c89b3c;
-}
-
-/* -----------------------------------
-   HERO SECTION (HOME PAGE)
------------------------------------ */
-.hero {
-    background: url("images/banner.png") center/cover no-repeat;
-    padding: 120px 20px;
-    text-align: center;
-    color: #fff;
-    position: relative;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 26, 47, 0.6);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 18px;
-    opacity: 0.9;
-}
-
-.hero-buttons {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.btn {
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-primary {
-    background: #c89b3c;
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: #b38732;
-}
-
-.btn-outline {
-    border: 2px solid #c89b3c;
-    color: #fff;
-}
-
-.btn-outline:hover {
-    background: #c89b3c;
-}
-
-/* -----------------------------------
-   ABOUT PAGE
------------------------------------ */
-.about-section {
-    background: #fff;
-    padding: 60px 20px;
-}
-
-.about-box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.about-section h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #0a1a2f;
-}
-
-.about-box p {
-    line-height: 1.8;
-    font-size: 15px;
-    color: #444;
-}
-
-/* -----------------------------------
-   SERVICES PAGE
------------------------------------ */
-.services-hero {
-    text-align: center;
-    padding: 70px 20px;
-    background: #0a1a2f;
-    color: #fff;
-}
-
-.services-hero h1 {
-    font-size: 42px;
-    margin-bottom: 5px;
-}
-
-.services-hero .tagline {
-    opacity: 0.9;
-    letter-spacing: 1px;
-}
-
-.service-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 30px;
-    padding: 50px 20px;
-}
-
-.service-column h2 {
-    font-size: 26px;
-    color: #0a1a2f;
-    border-left: 5px solid #c89b3c;
-    padding-left: 10px;
-    margin-bottom: 25px;
-}
-
-.product-box {
-    background: #fff;
-    padding: 18px 22px;
-    border-radius: 10px;
-    margin-bottom: 18px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.product-box h3 {
-    margin: 0;
-    color: #0a1a2f;
-}
-
-.product-box .sub {
-    font-size: 13px;
-    color: #555;
-}
-
-.product-box .price {
-    color: #c89b3c;
-    font-weight: bold;
-    margin-top: 8px;
-}
-
-.benefits {
-    padding-left: 18px;
-}
-
-.benefits li {
-    margin-bottom: 8px;
-}
-
-.closing-line {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #0a1a2f;
-}
-
-/* -----------------------------------
-   CONTACT PAGE
------------------------------------ */
-.contact-hero {
-    background: #0a1a2f;
     color: white;
-    padding: 60px 20px;
+    padding: 15px;
     text-align: center;
 }
 
-.contact-section {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.contact-title {
-    font-size: 30px;
-    color: #0a1a2f;
-    margin-bottom: 20px;
+.page-header {
     text-align: center;
+    padding: 30px 15px;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 18px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.contact-item i {
-    font-size: 20px;
-    color: #c89b3c;
-}
-
-.contact-buttons {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.contact-buttons .btn {
-    display: inline-block;
-    margin: 10px;
-}
-
-/* -----------------------------------
-   FOOTER
------------------------------------ */
-footer {
-    background: #0a1a2f;
-    color: #fff;
-    text-align: center;
-    padding: 25px 0;
-    margin-top: 40px;
-}
-
-/* -----------------------------------
-   RESPONSIVE
------------------------------------ */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-    .hero h1 {
-        font-size: 32px;
-    }
-    .service-columns {
-        grid-template-columns: 1fr;
-    }
-}
-/* BOOKING PAGE */
-.booking-section {
-  max-width: 600px;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  margin: 40px auto;
-  box-shadow: rgba(0,0,0,0.1) 0 5px 20px;
-}
-
-.booking-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #0a1a2f;
-}
-
-.booking-section label {
-  font-weight: 600;
-  display: block;
-  margin-top: 10px;
-}
-
-.booking-section input,
-.booking-section select,
-.booking-section textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-.success-message {
-  text-align: center;
-  padding: 10px;
-  margin-top: 15px;
-  background: #d4ffd6;
-  color: #0a8a24;
-  border-radius: 8px;
-  display: none;
-}
-.divider {
-    margin: 40px auto;
-    width: 80%;
-    border: none;
-    border-top: 2px solid #e3e3e3;
-}
-/* -----------------------------------
-   2 COLUMN FORM LAYOUT
------------------------------------ */
+/* ================= GRID ================= */
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 20px;
 }
 
-/* Card wrapper */
+/* ================= CARDS ================= */
 .form-card {
-    background: #ffffff;
+    background: white;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
-/* Headings */
 .form-card h2 {
-    color: #0a1a2f;
-    margin-bottom: 10px;
-}
-
-/* FORM FIELDS */
-.bep-form {
-    margin-top: 15px;
-}
-
-.form-group {
-    margin-bottom: 12px;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #d0d0d0;
-    font-size: 15px;
-}
-
-/* CHECKBOX AREA */
-.form-checkbox-group {
-    background: #f5f7fa;
-    padding: 12px;
-    border-radius: 10px;
     margin-bottom: 15px;
+    color: #0a1a2f;
 }
 
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+/* ================= INPUTS ================= */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
-/* BUTTON */
-.btn-primary {
+textarea {
+    height: 90px;
+}
+
+/* ================= CHECKBOX ================= */
+.check-group {
+    background: #f0f3f8;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.check-group label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
     background: #0a1a2f;
     color: white;
-    border: none;
-    padding: 13px;
-    width: 100%;
-    border-radius: 10px;
+    font-size: 15px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    margin-top: 10px;
 }
 
-.btn-primary:hover {
+.btn:hover {
     background: #122a4d;
 }
 
-/* -----------------------------------
-   RESPONSIVE (MOBILE)
------------------------------------ */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
     .form-grid {
         grid-template-columns: 1fr;
