@@ -332,3 +332,44 @@ textarea {
 .whatsapp-float:hover {
     transform: scale(1.1);
 }
+/* ================= CONTENT SECTIONS ================= */
+.content-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+}
+
+/* ================= ABOUT PAGE ================= */
+.about-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.about-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    line-height: 1.7;
+}
+
+.about-box h2,
+.about-box h3 {
+    margin-top: 20px;
+    color: #0a1a2f;
+}
+
+.about-box p {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* HERO SPACING FIX */
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+}
