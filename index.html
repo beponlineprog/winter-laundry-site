@@ -1,146 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cozy Threads</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cozy Threads – Winter Essentials & Laundry</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<nav class="navbar">
-    <h2>COZY THREADS</h2>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<!-- NAV -->
+<nav>
+    <div class="logo">Cozy Threads</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </nav>
 
-<header class="hero">
-    <div class="overlay"></div>
+<!-- HERO -->
+<section class="hero">
     <div class="hero-content">
-        <h1>COZY THREADS</h1>
-        <p>Comfort You Can Count On</p>
-        <h2>❄️ Winter Essentials Store</h2>
-        <a href="#shop" class="btn primary">Shop Now</a>
-    </div>
-</header>
+        <h1>Stay Warm. Stay Fresh.</h1>
+        <p>Winter Essentials & Laundry Services You Can Trust</p>
 
-<section id="shop">
-    <h2>Winter Essentials</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Beanies</h3>
-            <p class="price">R20 each</p>
-            <button onclick="order('Beanie')">Order</button>
+        <div class="hero-buttons">
+            <a href="services.html" class="btn btn-primary">Shop Winter Essentials</a>
+            <a href="contact.html" class="btn btn-outline">Laundry Bookings</a>
         </div>
-
-        <div class="card">
-            <h3>Gloves</h3>
-            <p class="price">R20 / R45 set</p>
-            <button onclick="order('Gloves')">Order</button>
-        </div>
-
-        <div class="card">
-            <h3>Socks</h3>
-            <p class="price">R15–R60</p>
-            <button onclick="order('Socks')">Order</button>
-        </div>
-
-        <div class="card">
-            <h3>Umbrellas</h3>
-            <p class="price">R50</p>
-            <button onclick="order('Umbrella')">Order</button>
-        </div>
-
     </div>
 </section>
 
-<script>
-function order(item){
-    let phone = "27878190578";
-    let msg = "Hello, I want to order: " + item;
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg));
-}
-</script>
+<!-- ABOUT PREVIEW -->
+<div class="container">
+    <h2 style="text-align:center; color:#0a1a2f;">Your Comfort, Our Priority</h2>
+    <p style="text-align:center; max-width:750px; margin:auto;">
+        Cozy Threads is your home for affordable winter essentials and
+        high-quality laundry care. From warm beanies to reliable umbrellas and
+        professional wash services — we keep you warm, clean, and confident.
+    </p>
 
-</body>
-</html>
-        <div class="card">
-            <h3>Beanies</h3>
-            <p>Stylish • Warm • Soft</p>
-            <p class="price">3 for R45 | 1 for R20</p>
-            <button onclick="order('Beanies')">Order on WhatsApp</button>
-        </div>
-
-        <div class="card">
-            <h3>Umbrellas</h3>
-            <p>Strong • Compact • Reliable</p>
-            <p class="price">R50 each</p>
-            <button onclick="order('Umbrella')">Order on WhatsApp</button>
-        </div>
-
+    <div style="text-align:center; margin-top:25px;">
+        <a href="about.html" class="btn btn-primary">Learn More</a>
     </div>
+</div>
 
-</section>
-
-<!-- LAUNDRY SECTION -->
-<section id="laundry">
-
-    <h2>🧺 Laundry Services</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Small Basket</h3>
-            <p class="price">R110</p>
-            <button onclick="order('Laundry Small Basket')">Book Service</button>
-        </div>
-
-        <div class="card">
-            <h3>Medium Basket</h3>
-            <p class="price">R150</p>
-            <button onclick="order('Laundry Medium Basket')">Book Service</button>
-        </div>
-
-        <div class="card">
-            <h3>Large Basket</h3>
-            <p class="price">R200</p>
-            <button onclick="order('Laundry Large Basket')">Book Service</button>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-
-    <h2>📞 Contact Us</h2>
-    <p>WhatsApp Orders: <strong>078 819 0578</strong></p>
-    <p>Location: 35446 Ndumo Street, Barcelona</p>
-
-</section>
-
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Cozy Threads | Winter Essentials & Laundry Services</p>
+    © 2026 Cozy Threads – Winter Essentials & Laundry Services
 </footer>
-
-<!-- WHATSAPP ORDER SCRIPT -->
-<script>
-function order(item){
-    let phone = "27788190578";
-    let message = "Hello, I want to order: " + item;
-    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-    window.open(url, "_blank");
-}
-</script>
 
 </body>
 </html>
