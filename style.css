@@ -301,3 +301,45 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* BOOKING PAGE */
+.booking-section {
+  max-width: 600px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 40px auto;
+  box-shadow: rgba(0,0,0,0.1) 0 5px 20px;
+}
+
+.booking-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0a1a2f;
+}
+
+.booking-section label {
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.success-message {
+  text-align: center;
+  padding: 10px;
+  margin-top: 15px;
+  background: #d4ffd6;
+  color: #0a8a24;
+  border-radius: 8px;
+  display: none;
+}
