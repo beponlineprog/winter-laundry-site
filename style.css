@@ -419,3 +419,32 @@ hr {
     font-weight: bold;
     color: #0a1a2f;
 }
+/* ================= HERO BANNER BACKGROUND ================= */
+.hero {
+    height: 70vh;
+    background: url("images/banner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.hero-overlay {
+    background: rgba(10, 26, 47, 0.65);
+    padding: 40px 25px;
+    border-radius: 12px;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
