@@ -1,86 +1,204 @@
-/* ============================================
-   CONTACT PAGE – PREMIUM DESIGN
-=============================================== */
-
-.contact-heading {
-    text-align: center;
-    font-size: 32px;
-    color: #0b3d91;
-    font-weight: 700;
-}
-
-.contact-sub {
-    text-align: center;
-    margin-top: 10px;
-    color: #444;
-    font-size: 16px;
-}
-
-.contact-details-box {
-    background: white;
-    padding: 30px;
-    margin-top: 30px;
-    border-radius: 12px;
-    border: 1px solid #e5e9f2;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-}
-
-.contact-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 18px;
-}
-
-.contact-row .icon {
-    font-size: 26px;
-    margin-right: 15px;
-}
-
-.contact-row p {
-    font-size: 18px;
+/* -----------------------------------
+   GLOBAL STYLES
+----------------------------------- */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f7f7f7;
     color: #222;
 }
 
-/* BUTTONS */
-.contact-buttons {
-    text-align: center;
-    margin-top: 35px;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-.contact-btn {
-    display: inline-block;
-    padding: 14px 25px;
-    border-radius: 8px;
-    text-decoration: none;
+h1, h2, h3 {
     font-weight: 600;
-    margin: 10px;
-    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* -----------------------------------
+   NAVIGATION
+----------------------------------- */
+nav {
+    background: #0a1a2f;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
     transition: 0.3s;
 }
 
-/* WhatsApp */
-.contact-btn.whatsapp {
-    background: #25D366;
-    color: white;
-}
-.contact-btn.whatsapp:hover {
-    background: #1ebe5c;
+nav ul li a:hover {
+    color: #c89b3c;
 }
 
-/* Email */
-.contact-btn.email {
-    background: #ffd75e;
-    color: #333;
-}
-.contact-btn.email:hover {
-    background: #f5c94d;
+/* -----------------------------------
+   HERO SECTION (HOME PAGE)
+----------------------------------- */
+.hero {
+    background: url("images/banner.png") center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
 }
 
-/* Location */
-.contact-btn.location {
-    background: #0b3d91;
-    color: white;
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 26, 47, 0.6);
 }
-.contact-btn.location:hover {
-    background: #092c6b;
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #c89b3c;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #b38732;
+}
+
+.btn-outline {
+    border: 2px solid #c89b3c;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: #c89b3c;
+}
+
+/* -----------------------------------
+   ABOUT PAGE
+----------------------------------- */
+.about-section {
+    background: #fff;
+    padding: 60px 20px;
+}
+
+.about-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.about-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0a1a2f;
+}
+
+.about-box p {
+    line-height: 1.8;
+    font-size: 15px;
+    color: #444;
+}
+
+/* -----------------------------------
+   SERVICES PAGE
+----------------------------------- */
+.services-hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: #0a1a2f;
+    color: #fff;
+}
+
+.services-hero h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.services-hero .tagline {
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.service-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.service-column h2 {
+    font-size: 26px;
+    color: #0a1a2f;
+    border-left: 5px solid #c89b3c;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+.product-box {
+    background: #fff;
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.product-box h3 {
+    margin: 0;
+    color: #0a1a2f;
+}
+
+.product-box .sub {
