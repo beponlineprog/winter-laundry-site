@@ -278,3 +278,26 @@ input, select, textarea {
     margin: 0;
     color: #111;
 }
+/* ================= CONTACT BUTTONS CENTER ================= */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* ================= BUTTON STYLE (already exists but reinforced) ================= */
+.btn-primary {
+    background: #D4AF37;
+    color: #111;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #b8922f;
+}
