@@ -349,3 +349,51 @@ input, select, textarea {
     gap: 15px;
     flex-wrap: wrap;
 }
+/* ================= BOOKING LAYOUT ================= */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    padding: 40px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= CONTACT LIST ================= */
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 10px 0;
+}
+
+/* ================= SECONDARY BUTTON ================= */
+.btn-secondary {
+    display: block;
+    background: #111;
+    color: #D4AF37;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #D4AF37;
+    color: #111;
+}
+
+/* SMALL TEXT */
+.small-text {
+    font-size: 13px;
+    color: #666;
+    margin-top: 10px;
+}
