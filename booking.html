@@ -23,85 +23,41 @@
 
 <!-- ================= HEADER ================= -->
 <header class="page-header">
-    <h1>Book a Service</h1>
-    <p>Fast • Easy • Convenient</p>
+    <h1>Bookings</h1>
+    <p>Choose a service below to place your order or book a laundry basket.</p>
 </header>
 
 <!-- ================= BOOKING SECTION ================= -->
-<section class="booking-wrapper">
+<section class="booking-section">
 
-    <h2 class="center-title">Choose a Service to Book</h2>
+    <div class="form-grid">
 
-    <div class="forms-container">
-
-        <!-- LAUNDRY FORM -->
+        <!-- ================= LAUNDRY FORM ================= -->
         <div class="form-card">
             <h2>🧺 Laundry Booking</h2>
+            <p>Book your basket quickly and easily.</p>
 
-            <div class="form-group">
-                <input id="l_name" type="text" placeholder="Full Name" required>
-            </div>
-
-            <div class="form-group">
-                <input id="l_phone" type="tel" placeholder="Phone Number" required>
-            </div>
-
-            <div class="form-group">
-                <input id="l_email" type="email" placeholder="Email (optional)">
-            </div>
-
-            <div class="form-group">
-                <select id="l_service" required>
-                    <option value="">Select Laundry Service</option>
-                    <option>Small Basket – R110</option>
-                    <option>Medium Basket – R150</option>
-                    <option>Large Basket – R200</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <input id="l_date" type="date" required>
-            </div>
-
-            <div class="form-group">
-                <textarea id="l_notes" placeholder="Additional Notes (optional)"></textarea>
-            </div>
-
-            <button type="button" onclick="sendLaundry()" class="btn-primary">
-                Submit Laundry Booking
-            </button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUPWk16XdcwRhdn-cGVr4AH528pPA1-rGlybypo1eXlt4cGg/viewform?usp=publish-editor"
+               target="_blank"
+               class="btn-primary full-btn">
+               Book Laundry
+            </a>
         </div>
 
-        <!-- WINTER FORM -->
+        <!-- ================= WINTER ESSENTIALS FORM ================= -->
         <div class="form-card">
             <h2>❄ Winter Essentials Order</h2>
+            <p>Place your order for warm items this winter.</p>
 
-            <div class="form-group">
-                <input id="w_name" type="text" placeholder="Full Name" required>
-            </div>
-
-            <div class="form-group">
-                <input id="w_phone" type="tel" placeholder="WhatsApp Number" required>
-            </div>
-
-            <div class="form-group checkbox-group">
-                <label><input class="w_item" type="checkbox" value="No-show Socks"> No-show Socks</label>
-                <label><input class="w_item" type="checkbox" value="Warm Gloves"> Warm Gloves</label>
-                <label><input class="w_item" type="checkbox" value="Thick Socks"> Thick Socks</label>
-                <label><input class="w_item" type="checkbox" value="Beanies"> Beanies</label>
-                <label><input class="w_item" type="checkbox" value="Umbrellas"> Umbrellas</label>
-            </div>
-
-            <div class="form-group">
-                <textarea id="w_notes" placeholder="Quantity / Notes (optional)"></textarea>
-            </div>
-
-            <button type="button" onclick="sendWinter()" class="btn-primary">
-                Submit Winter Order
-            </button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScc6jKOE5szfXbqWtOMljwXxh3Z4z7SjRQjcQcWNnR13Ro53w/viewform?usp=publish-editor"
+               target="_blank"
+               class="btn-primary full-btn">
+               Order Winter Essentials
+            </a>
         </div>
 
     </div>
+
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -132,9 +88,10 @@
             <h3>Contact Us</h3>
 
             <a href="tel:0788190578">📞 078 819 0578</a>
+
             <a href="mailto:thulim.belina@gmail.com">✉ thulim.belina@gmail.com</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519" 
-                target="_blank">
+
+            <a href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519" target="_blank">
                 📍 35446 Ndumo Street, Etwatwa 1519
             </a>
         </div>
@@ -142,8 +99,9 @@
     </div>
 
     <div class="footer-bottom">
-        © 2024 Winter Essentials & Laundry — All Rights Reserved
+        © 2024 Cozy Threads — All Rights Reserved
     </div>
+
 </footer>
 
 <!-- WhatsApp Floating Button -->
