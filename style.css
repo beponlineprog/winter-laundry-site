@@ -239,3 +239,42 @@ input, select, textarea {
 .contact-whatsapp h2 {
     color: #D4AF37;
 }
+/* ================= SERVICES 2 COLUMN LAYOUT ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================= SERVICE CARD ================= */
+.service-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h2 {
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.service-item {
+    background: #FAFAFA;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border-left: 4px solid #D4AF37;
+}
+
+.service-item h3 {
+    margin: 0;
+    color: #111;
+}
