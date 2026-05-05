@@ -318,3 +318,79 @@ textarea {
 .nav-links a.active {
     color: #ffcc00;
 }
+/* ================= BOOKING PAGE ================= */
+
+.booking-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.center-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.forms-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e6b800;
+}
+
+/* Mobile Fix */
+@media(max-width: 768px) {
+    .forms-container {
+        grid-template-columns: 1fr;
+    }
+}
