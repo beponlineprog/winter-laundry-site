@@ -83,8 +83,7 @@
 
     </div>
 
-</section>
-    <h2>🧾 Get a Quick Quote</h2>
+<h2>🧾 Get a Quick Quote</h2>
 
 <label>Choose Category:</label>
 <select id="category" onchange="toggleCategory()">
@@ -92,6 +91,7 @@
   <option value="laundry">Laundry</option>
 </select>
 
+<!-- ================= WINTER ================= -->
 <div id="winterSection">
 
   <label><input type="checkbox" id="beanieCheck"> Beanies (R30 each / R75 for 3)</label>
@@ -111,7 +111,9 @@
 
 </div>
 
+<!-- ================= LAUNDRY ================= -->
 <div id="laundrySection" style="display:none;">
+
   <label>Service:</label>
   <select id="service">
     <option value="wash">Wash Only</option>
@@ -125,6 +127,7 @@
     <option value="medium">Medium</option>
     <option value="large">Large</option>
   </select>
+
 </div>
 
 <button onclick="calculate()">Get Quote</button>
@@ -132,7 +135,7 @@
 <div id="result" style="font-weight:bold; margin-top:15px;"></div>
 
 <a id="whatsappBtn" target="_blank">
-  <button>Book via WhatsApp</button>
+  <button>📲 Book via WhatsApp</button>
 </a>
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -248,7 +251,7 @@ function calculate() {
 
   document.getElementById("result").innerText = "Total: R" + price;
 
-  let phone = "27878190578";
+  let phone = "27788190578";
 
   let message = `Hi, I want to book:
 ${details}
