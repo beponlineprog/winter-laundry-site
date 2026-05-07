@@ -28,10 +28,10 @@
     <p>Choose your service and contact us easily</p>
 </header>
 
-<!-- ================= BOOKING LAYOUT ================= -->
+<!-- ================= BOOKING SECTION ================= -->
 <section class="booking-container">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT COLUMN -->
     <div class="booking-left">
 
         <div class="card-box">
@@ -39,8 +39,8 @@
             <p>Professional wash, fold & iron service</p>
 
             <a class="btn-primary"
-            target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfUPWk16XdcwRhdn-cGVr4AH528pPA1-rGlybypo1eXlt4cGg/viewform?usp=publish-editor">
+               target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfUPWk16XdcwRhdn-cGVr4AH528pPA1-rGlybypo1eXlt4cGg/viewform?usp=publish-editor">
                 Book Laundry
             </a>
         </div>
@@ -50,244 +50,104 @@
             <p>Warm clothing & winter accessories</p>
 
             <a class="btn-primary"
-            target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLScc6jKOE5szfXbqWtOMljwXxh3Z4z7SjRQjcQcWNnR13Ro53w/viewform?usp=publish-editor">
+               target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLScc6jKOE5szfXbqWtOMljwXxh3Z4z7SjRQjcQcWNnR13Ro53w/viewform?usp=publish-editor">
                 Order Winter Items
             </a>
         </div>
 
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT COLUMN -->
     <div class="booking-right">
 
         <div class="card-box">
-
             <h2>📞 Contact Us</h2>
 
             <a class="btn-secondary" href="tel:0788190578">📱 Call / WhatsApp</a>
-
             <a class="btn-secondary" href="mailto:thulim.belina@gmail.com">✉ Email Us</a>
-
-            <a class="btn-secondary"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519">
+            <a class="btn-secondary" target="_blank"
+               href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519">
                 📍 Location
             </a>
 
-            <p class="note">
-                For more information feel free to contact us anytime.
-            </p>
-
+            <p class="note">For more information feel free to contact us anytime.</p>
         </div>
 
     </div>
 
-<h2>🧾 Get a Quick Quote</h2>
+</section>
 
-<label>Choose Category:</label>
-<select id="category" onchange="toggleCategory()">
-  <option value="winter">Winter Essentials</option>
-  <option value="laundry">Laundry</option>
-</select>
+<!-- ================= QUICK QUOTE SECTION ================= -->
+<section class="quote-section">
 
-<!-- ================= WINTER ================= -->
-<div id="winterSection">
+    <div class="card-box">
 
-  <label><input type="checkbox" id="beanieCheck"> Beanies (R30 each / R75 for 3)</label>
-  <input type="number" id="beanieQty" placeholder="Qty" min="0">
+        <h2>🧾 Get a Quick Quote</h2>
 
-  <label><input type="checkbox" id="glovesCheck"> Gloves (R20 each / R50 for 3)</label>
-  <input type="number" id="glovesQty" placeholder="Qty" min="0">
+        <label for="category"><strong>Choose Category:</strong></label>
+        <select id="category">
+            <option value="">Select…</option>
+            <option value="beanies">Beanies</option>
+            <option value="gloves">Gloves</option>
+            <option value="medium_socks">Medium Warm Socks</option>
+            <option value="no_show_socks">No-Show Socks</option>
+            <option value="umbrella">Umbrella</option>
+        </select>
 
-  <label><input type="checkbox" id="msocksCheck"> Medium Warm Socks (R30 / R75 for 3)</label>
-  <input type="number" id="msocksQty" placeholder="Qty" min="0">
+        <div class="quote-items">
 
-  <label><input type="checkbox" id="noshowCheck"> No-Show Socks (R20 / R50 for 3)</label>
-  <input type="number" id="noshowQty" placeholder="Qty" min="0">
+            <!-- One item block -->
+            <div class="quote-item">
+                <label>
+                    <input type="checkbox">
+                    Beanies (R30 each / R75 for 3)
+                </label>
+                <input type="number" min="0" placeholder="Qty">
+            </div>
 
-  <label><input type="checkbox" id="umbrellaCheck"> Umbrella (R65)</label>
-  <input type="number" id="umbrellaQty" placeholder="Qty" min="0">
+            <div class="quote-item">
+                <label>
+                    <input type="checkbox">
+                    Gloves (R20 each / R50 for 3)
+                </label>
+                <input type="number" min="0" placeholder="Qty">
+            </div>
 
-</div>
+            <div class="quote-item">
+                <label>
+                    <input type="checkbox">
+                    Medium Warm Socks (R30 / R75 for 3)
+                </label>
+                <input type="number" min="0" placeholder="Qty">
+            </div>
 
-<!-- ================= LAUNDRY ================= -->
-<div id="laundrySection" style="display:none;">
+            <div class="quote-item">
+                <label>
+                    <input type="checkbox">
+                    No-Show Socks (R20 / R50 for 3)
+                </label>
+                <input type="number" min="0" placeholder="Qty">
+            </div>
 
-  <label>Service:</label>
-  <select id="service">
-    <option value="wash">Wash Only</option>
-    <option value="wash_fold">Wash & Fold</option>
-    <option value="full">Wash, Fold & Iron</option>
-  </select>
+            <div class="quote-item">
+                <label>
+                    <input type="checkbox">
+                    Umbrella (R65)
+                </label>
+                <input type="number" min="0" placeholder="Qty">
+            </div>
 
-  <label>Basket Size:</label>
-  <select id="basket">
-    <option value="small">Small</option>
-    <option value="medium">Medium</option>
-    <option value="large">Large</option>
-  </select>
-
-</div>
-
-<button onclick="calculate()">Get Quote</button>
-
-<div id="result" style="font-weight:bold; margin-top:15px;"></div>
-
-<a id="whatsappBtn" target="_blank">
-  <button>📲 Book via WhatsApp</button>
-</a>
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- QUICK LINKS -->
-        <div class="footer-column">
-            <h3>Quick Links</h3>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="booking.html">Booking</a>
-            <a href="contact.html">Contact</a>
         </div>
 
-        <!-- SERVICES -->
-        <div class="footer-column">
-            <h3>Our Services</h3>
-            <p>🧺 Wash Only</p>
-            <p>🧺 Wash & Fold</p>
-            <p>🧺 Wash, Fold & Iron</p>
-            <p>❄ Winter Essentials</p>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-
-            <a href="tel:0788190578">📞 078 819 0578</a>
-
-            <a href="mailto:thulim.belina@gmail.com">✉ thulim.belina@gmail.com</a>
-
-            <a href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519" target="_blank">
-                📍 35446 Ndumo Street, Etwatwa 1519
-            </a>
-        </div>
-
-        <!-- BRAND -->
-        <div class="footer-column">
-            <h3>Cozy Threads</h3>
-            <p>Where Clean Clothes Meet Winter Warmth.</p>
-            <p>Affordable • Reliable • Comfortable</p>
+        <div class="quote-buttons">
+            <button class="btn-primary">Get Quote</button>
+            <a class="btn-secondary" href="https://wa.me/0788190578">Book via WhatsApp</a>
         </div>
 
     </div>
 
-    <div class="footer-bottom">
-        © 2026 Cozy Threads — All Rights Reserved
-    </div>
+</section>
 
-</footer>
-
-<!-- ================= WHATSAPP FLOAT ================= -->
-<a class="whatsapp-float"
-href="https://wa.me/27788190578?text=Hello%20Cozy%20Threads%20👋%20I%20need%20help%20with%20booking"
-target="_blank">
-💬
-</a>
-<script>
-function toggleCategory() {
-  let category = document.getElementById("category").value;
-
-  document.getElementById("winterSection").style.display =
-    category === "winter" ? "block" : "none";
-
-  document.getElementById("laundrySection").style.display =
-    category === "laundry" ? "block" : "none";
-}
-
-function calculate() {
-  let category = document.getElementById("category").value;
-  let price = 0;
-  let details = "";
-
-  // ================= WINTER =================
-  if (category === "winter") {
-
-    if (document.getElementById("beanieCheck").checked) {
-      let q = parseInt(document.getElementById("beanieQty").value) || 0;
-      let sub = Math.floor(q/3)*75 + (q%3)*30;
-      price += sub;
-      details += `Beanies x${q}\n`;
-    }
-
-    if (document.getElementById("glovesCheck").checked) {
-      let q = parseInt(document.getElementById("glovesQty").value) || 0;
-      let sub = Math.floor(q/3)*50 + (q%3)*20;
-      price += sub;
-      details += `Gloves x${q}\n`;
-    }
-
-    if (document.getElementById("msocksCheck").checked) {
-      let q = parseInt(document.getElementById("msocksQty").value) || 0;
-      let sub = Math.floor(q/3)*75 + (q%3)*30;
-      price += sub;
-      details += `Medium Socks x${q}\n`;
-    }
-
-    if (document.getElementById("noshowCheck").checked) {
-      let q = parseInt(document.getElementById("noshowQty").value) || 0;
-      let sub = Math.floor(q/3)*50 + (q%3)*20;
-      price += sub;
-      details += `No-Show Socks x${q}\n`;
-    }
-
-    if (document.getElementById("umbrellaCheck").checked) {
-      let q = parseInt(document.getElementById("umbrellaQty").value) || 0;
-      let sub = q * 65;
-      price += sub;
-      details += `Umbrella x${q}\n`;
-    }
-  }
-
-  // ================= LAUNDRY =================
-  if (category === "laundry") {
-
-    let service = document.getElementById("service").value;
-    let basket = document.getElementById("basket").value;
-
-    if (service === "wash") {
-      if (basket === "small") price = 90;
-      if (basket === "medium") price = 120;
-      if (basket === "large") price = 160;
-    }
-
-    if (service === "wash_fold") {
-      if (basket === "small") price = 110;
-      if (basket === "medium") price = 150;
-      if (basket === "large") price = 200;
-    }
-
-    if (service === "full") {
-      if (basket === "small") price = 140;
-      if (basket === "medium") price = 180;
-      if (basket === "large") price = 230;
-    }
-
-    details = service + " - " + basket;
-  }
-
-  // ================= OUTPUT =================
-  document.getElementById("result").innerText = "Total: R" + price;
-
-  let phone = "27788190578";
-
-  let message = `Hi Cozy Threads 👋\n\nOrder:\n${details}\nTotal: R${price}`;
-
-  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-  document.getElementById("whatsappBtn").href = url;
-}
-                       </script>
 </body>
-</html></html>
+</html>
