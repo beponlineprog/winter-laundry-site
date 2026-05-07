@@ -211,20 +211,48 @@ function calculate() {
   let price = 0;
   let details = "";
 
+  // ================= WINTER =================
   if (category === "winter") {
-    let product = document.getElementById("product").value;
-    let qty = parseInt(document.getElementById("qty").value);
 
-    if (product === "umbrella") price = qty * 65;
-    if (product === "beanie") price = (Math.floor(qty/3)*75) + (qty%3)*30;
-    if (product === "medium_socks") price = (Math.floor(qty/3)*75) + (qty%3)*30;
-    if (product === "gloves" || product === "noshow")
-      price = (Math.floor(qty/3)*50) + (qty%3)*20;
+    if (document.getElementById("beanieCheck").checked) {
+      let q = parseInt(document.getElementById("beanieQty").value) || 0;
+      let sub = Math.floor(q/3)*75 + (q%3)*30;
+      price += sub;
+      details += `Beanies x${q}\n`;
+    }
 
-    details = product + " x" + qty;
+    if (document.getElementById("glovesCheck").checked) {
+      let q = parseInt(document.getElementById("glovesQty").value) || 0;
+      let sub = Math.floor(q/3)*50 + (q%3)*20;
+      price += sub;
+      details += `Gloves x${q}\n`;
+    }
+
+    if (document.getElementById("msocksCheck").checked) {
+      let q = parseInt(document.getElementById("msocksQty").value) || 0;
+      let sub = Math.floor(q/3)*75 + (q%3)*30;
+      price += sub;
+      details += `Medium Socks x${q}\n`;
+    }
+
+    if (document.getElementById("noshowCheck").checked) {
+      let q = parseInt(document.getElementById("noshowQty").value) || 0;
+      let sub = Math.floor(q/3)*50 + (q%3)*20;
+      price += sub;
+      details += `No-Show Socks x${q}\n`;
+    }
+
+    if (document.getElementById("umbrellaCheck").checked) {
+      let q = parseInt(document.getElementById("umbrellaQty").value) || 0;
+      let sub = q * 65;
+      price += sub;
+      details += `Umbrella x${q}\n`;
+    }
   }
 
+  // ================= LAUNDRY =================
   if (category === "laundry") {
+
     let service = document.getElementById("service").value;
     let basket = document.getElementById("basket").value;
 
@@ -246,21 +274,20 @@ function calculate() {
       if (basket === "large") price = 230;
     }
 
-    details = service + " - " + basket + " basket";
+    details = service + " - " + basket;
   }
 
+  // ================= OUTPUT =================
   document.getElementById("result").innerText = "Total: R" + price;
 
   let phone = "27788190578";
 
-  let message = `Hi, I want to book:
-${details}
-Total: R${price}`;
+  let message = `Hi Cozy Threads 👋\n\nOrder:\n${details}\nTotal: R${price}`;
 
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   document.getElementById("whatsappBtn").href = url;
 }
-                             </script>
+                       </script>
 </body>
 </html></html>
