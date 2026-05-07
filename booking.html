@@ -93,17 +93,22 @@
 </select>
 
 <div id="winterSection">
-  <label>Product:</label>
-  <select id="product">
-    <option value="beanie">Beanie</option>
-    <option value="gloves">Gloves</option>
-    <option value="medium_socks">Medium Warm Socks</option>
-    <option value="noshow">No-Show Socks</option>
-    <option value="umbrella">Umbrella</option>
-  </select>
 
-  <label>Quantity:</label>
-  <input type="number" id="qty" value="1" min="1">
+  <label><input type="checkbox" id="beanieCheck"> Beanies (R30 each / R75 for 3)</label>
+  <input type="number" id="beanieQty" placeholder="Qty" min="0">
+
+  <label><input type="checkbox" id="glovesCheck"> Gloves (R20 each / R50 for 3)</label>
+  <input type="number" id="glovesQty" placeholder="Qty" min="0">
+
+  <label><input type="checkbox" id="msocksCheck"> Medium Warm Socks (R30 / R75 for 3)</label>
+  <input type="number" id="msocksQty" placeholder="Qty" min="0">
+
+  <label><input type="checkbox" id="noshowCheck"> No-Show Socks (R20 / R50 for 3)</label>
+  <input type="number" id="noshowQty" placeholder="Qty" min="0">
+
+  <label><input type="checkbox" id="umbrellaCheck"> Umbrella (R65)</label>
+  <input type="number" id="umbrellaQty" placeholder="Qty" min="0">
+
 </div>
 
 <div id="laundrySection" style="display:none;">
