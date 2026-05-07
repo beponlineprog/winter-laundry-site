@@ -84,6 +84,51 @@
     </div>
 
 </section>
+    <h2>🧾 Get a Quick Quote</h2>
+
+<label>Choose Category:</label>
+<select id="category" onchange="toggleCategory()">
+  <option value="winter">Winter Essentials</option>
+  <option value="laundry">Laundry</option>
+</select>
+
+<div id="winterSection">
+  <label>Product:</label>
+  <select id="product">
+    <option value="beanie">Beanie</option>
+    <option value="gloves">Gloves</option>
+    <option value="medium_socks">Medium Warm Socks</option>
+    <option value="noshow">No-Show Socks</option>
+    <option value="umbrella">Umbrella</option>
+  </select>
+
+  <label>Quantity:</label>
+  <input type="number" id="qty" value="1" min="1">
+</div>
+
+<div id="laundrySection" style="display:none;">
+  <label>Service:</label>
+  <select id="service">
+    <option value="wash">Wash Only</option>
+    <option value="wash_fold">Wash & Fold</option>
+    <option value="full">Wash, Fold & Iron</option>
+  </select>
+
+  <label>Basket Size:</label>
+  <select id="basket">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+  </select>
+</div>
+
+<button onclick="calculate()">Get Quote</button>
+
+<div id="result" style="font-weight:bold; margin-top:15px;"></div>
+
+<a id="whatsappBtn" target="_blank">
+  <button>Book via WhatsApp</button>
+</a>
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
 
