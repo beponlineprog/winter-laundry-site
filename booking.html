@@ -187,6 +187,72 @@ href="https://wa.me/27788190578?text=Hello%20Cozy%20Threads%20👋%20I%20need%20
 target="_blank">
 💬
 </a>
+<script>
+function toggleCategory() {
+  let category = document.getElementById("category").value;
 
+  document.getElementById("winterSection").style.display =
+    category === "winter" ? "block" : "none";
+
+  document.getElementById("laundrySection").style.display =
+    category === "laundry" ? "block" : "none";
+}
+
+function calculate() {
+  let category = document.getElementById("category").value;
+  let price = 0;
+  let details = "";
+
+  if (category === "winter") {
+    let product = document.getElementById("product").value;
+    let qty = parseInt(document.getElementById("qty").value);
+
+    if (product === "umbrella") price = qty * 65;
+    if (product === "beanie") price = (Math.floor(qty/3)*75) + (qty%3)*30;
+    if (product === "medium_socks") price = (Math.floor(qty/3)*75) + (qty%3)*30;
+    if (product === "gloves" || product === "noshow")
+      price = (Math.floor(qty/3)*50) + (qty%3)*20;
+
+    details = product + " x" + qty;
+  }
+
+  if (category === "laundry") {
+    let service = document.getElementById("service").value;
+    let basket = document.getElementById("basket").value;
+
+    if (service === "wash") {
+      if (basket === "small") price = 90;
+      if (basket === "medium") price = 120;
+      if (basket === "large") price = 160;
+    }
+
+    if (service === "wash_fold") {
+      if (basket === "small") price = 110;
+      if (basket === "medium") price = 150;
+      if (basket === "large") price = 200;
+    }
+
+    if (service === "full") {
+      if (basket === "small") price = 140;
+      if (basket === "medium") price = 180;
+      if (basket === "large") price = 230;
+    }
+
+    details = service + " - " + basket + " basket";
+  }
+
+  document.getElementById("result").innerText = "Total: R" + price;
+
+  let phone = "27878190578";
+
+  let message = `Hi, I want to book:
+${details}
+Total: R${price}`;
+
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  document.getElementById("whatsappBtn").href = url;
+}
+                             </script>
 </body>
 </html></html>
