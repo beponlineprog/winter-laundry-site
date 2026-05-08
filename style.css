@@ -1,7 +1,4 @@
-/* =========================================
-   COZY THREADS – BLACK & GOLD THEME
-========================================= */
-
+/* ================= GLOBAL RESETS ================= */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +7,7 @@
 
 body {
     font-family: "Poppins", Arial, sans-serif;
-    background: #f5f5f5;
+    background: #f7f7f7;
     color: #222;
     line-height: 1.6;
 }
@@ -19,16 +16,16 @@ body {
 .navbar {
     background: #000;
     color: #fff;
-    padding: 15px 25px;
+    padding: 15px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     color: #cfa245;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -38,8 +35,8 @@ body {
 }
 
 .nav-links a {
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
     font-weight: 500;
 }
 
@@ -48,101 +45,111 @@ body {
     color: #cfa245;
 }
 
-/* ================= PAGE HEADER ================= */
-.page-header {
-    background: #000;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
+/* ================= HERO BANNER ================= */
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.page-header h1 {
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.hero-text h1 {
     font-size: 36px;
     font-weight: 700;
 }
 
-.page-header p {
+.hero-text p {
     font-size: 18px;
     color: #cfa245;
 }
 
-/* ================= SERVICES ================= */
-.services-section {
-    padding: 60px 20px;
+/* ================= INTRO SECTION ================= */
+.intro {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* ================= QUICK BUTTONS ================= */
+.quick-buttons {
     display: flex;
     justify-content: center;
+    gap: 15px;
+    margin: 30px 0 50px;
+    flex-wrap: wrap;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    width: 100%;
+.quick-btn {
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #cfa245;
 }
 
-.service-card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+.quick-btn:hover {
+    background: #cfa245;
+    color: #000;
 }
 
-.service-card h2 {
-    margin-bottom: 5px;
-}
-
-.tagline {
-    color: #cfa245;
-    margin-bottom: 20px;
-}
-
-.service-item {
-    margin-bottom: 20px;
-}
-
-.service-item h3 {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-/* ================= FOOTER (CONTACT PAGE STYLE) ================= */
+/* ================= FOOTER ================= */
 .footer {
     background: #000;
     color: #fff;
-    padding: 40px 20px;
-    margin-top: 50px;
+    padding: 50px 20px 20px;
+    margin-top: 60px;
 }
 
 .footer-container {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
 }
 
-.footer h3 {
+.footer-column h3 {
     color: #cfa245;
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 15px;
 }
 
-.footer a {
-    color: #fff;
+.footer-column a {
+    display: block;
+    color: #ccc;
     text-decoration: none;
+    margin-bottom: 8px;
 }
 
-.footer a:hover {
+.footer-column a:hover {
     color: #cfa245;
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 25px;
-    padding-top: 20px;
+    padding-top: 15px;
     border-top: 1px solid #333;
-    color: #bbb;
-    font-size: 14px;
+    color: #888;
 }
