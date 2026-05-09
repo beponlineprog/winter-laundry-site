@@ -6,7 +6,6 @@
 <title>About Us – Cozy Threads</title>
 
 <style>
-/* ========= GLOBAL ========= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,7 +13,7 @@ body {
     color: #4a3f35;
 }
 
-/* ========= NAVBAR ========= */
+/* NAVBAR */
 .navbar {
     background: #d8c3a5;
     padding: 15px 25px;
@@ -26,7 +25,6 @@ body {
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #4a3f35;
 }
 
 .navbar .nav-links {
@@ -34,43 +32,54 @@ body {
     display: flex;
     gap: 20px;
 }
+
 .navbar .nav-links a {
     text-decoration: none;
     color: #4a3f35;
     font-weight: bold;
 }
-.navbar .nav-links .active {
+
+.navbar .active {
     border-bottom: 2px solid #4a3f35;
 }
 
-/* ========= PAGE HEADER ========= */
+/* HEADER */
 .page-header {
     text-align: center;
     padding: 70px 20px;
 }
+
 .page-header h1 {
     font-size: 2.3rem;
 }
+
 .page-header p {
     font-size: 1.1rem;
-    margin-top: 10px;
 }
 
-/* ========= CONTENT SECTION ========= */
+/* MAIN */
 .about-container {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
-    line-height: 1.6;
-    font-size: 1.1rem;
 }
 
-/* ========= CARD LAYOUT ========= */
+/* WELCOME CARD */
+.welcome-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 6px solid #b4846c;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* CARD GRID */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin-top: 30px;
 }
 
 .card {
@@ -79,90 +88,48 @@ body {
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border-top: 5px solid #b4846c;
-    transition: 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .card h2 {
     margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #4a3f35;
 }
 
 .card ul {
-    margin-top: 12px;
     padding-left: 18px;
 }
 
-.card ul li {
-    margin-bottom: 6px;
-}
-
-/* ================= FOOTER (2 Columns) ================= */
+/* FOOTER */
 .footer {
     background: #d8c3a5;
     padding: 50px 20px;
-    color: #4a3f35;
-    border-top: 4px solid #b4846c;
     margin-top: 60px;
+    border-top: 4px solid #b4846c;
 }
 
-/* Wrapper for two columns */
 .footer-columns {
     max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    text-align: left;
 }
 
-/* Each column */
 .footer-col h3 {
-    font-size: 1.4rem;
     margin-bottom: 10px;
 }
 
-.footer-col p {
-    font-size: 1rem;
-    margin: 6px 0;
-}
-
-.footer-col .brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.footer-col .tagline {
-    font-style: italic;
-    margin-top: 5px;
-}
-
-.footer-col .extras {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Bottom copyright */
 .footer .copyright {
     text-align: center;
     margin-top: 40px;
-    font-size: 0.95rem;
     opacity: 0.7;
 }
 
-/* Responsive – switch to 1 column */
 @media (max-width: 700px) {
     .footer-columns {
         grid-template-columns: 1fr;
         text-align: center;
     }
 }
-
 </style>
 </head>
 
@@ -189,48 +156,48 @@ body {
 <!-- MAIN CONTENT -->
 <section class="about-container">
 
-    <h2>Welcome to Cozy Threads</h2>
-    <p>
-        Welcome to Winter Essentials & Laundry Services – your trusted destination for everyday
-        comfort, warmth, and care.
-    </p>
+    <!-- ✅ NEW WELCOME NOTE ADDED HERE -->
+    <div class="welcome-card">
+        <h2>Welcome to Cozy Threads!</h2>
+        <p>
+            We’re a community-focused business dedicated to making everyday life a little warmer and a lot easier.
+            From quality winter essentials that protect you through the cold season to reliable laundry services
+            that keep your clothes clean, fresh, and ready to wear — everything we do is built on comfort,
+            convenience, and care.
+        </p>
+        <p>
+            Your warmth, your time, and your trust matter to us, and we’re here to serve you with affordability,
+            reliability, and a friendly touch you can always count on.
+        </p>
+    </div>
 
-    <p>
-        We are a proudly service-driven business dedicated to keeping you warm in winter and your
-        clothes fresh, clean, and perfectly cared for all year round. Our focus is simple:
-        <strong>quality products, reliable service, and affordability you can count on.</strong>
-    </p>
-
-    <!-- CARD LAYOUT -->
+    <!-- CARDS -->
     <div class="cards">
 
-        <!-- Winter Essentials Card -->
         <div class="card">
             <h2>❄ Winter Essentials</h2>
-            <p>When the cold season arrives, we make sure you are fully prepared.</p>
-
+            <p>Stay warm and protected during cold seasons.</p>
             <ul>
-                <li>Umbrellas for rainy and unpredictable weather</li>
-                <li>Beanies for warmth and style</li>
-                <li>No-show socks for a clean, comfortable fit</li>
-                <li>Long socks for extra warmth and protection</li>
-                <li>Gloves to keep your hands warm and cozy</li>
+                <li>Umbrellas</li>
+                <li>Beanies</li>
+                <li>No-show socks</li>
+                <li>Long socks</li>
+                <li>Gloves</li>
             </ul>
         </div>
 
-        <!-- Laundry Services Card -->
         <div class="card">
             <h2>🧺 Laundry Services</h2>
-            <p>Professional and convenient laundry solutions to make your life easier.</p>
-
+            <p>Reliable care for your clothing.</p>
             <ul>
-                <li>Wash Only – clean and fresh laundry</li>
-                <li>Wash & Fold – washed and neatly folded</li>
-                <li>Wash, Fold & Iron – fully prepared and ready to wear</li>
+                <li>Wash Only</li>
+                <li>Wash & Fold</li>
+                <li>Wash, Fold & Iron</li>
             </ul>
         </div>
 
     </div>
+
 </section>
 
 <!-- FOOTER -->
@@ -238,7 +205,6 @@ body {
 
     <div class="footer-columns">
 
-        <!-- LEFT COLUMN -->
         <div class="footer-col">
             <h3>Contact Us</h3>
             <p>📞 078 819 0578</p>
@@ -246,18 +212,15 @@ body {
             <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
         </div>
 
-        <!-- RIGHT COLUMN -->
         <div class="footer-col">
-            <h2 class="brand">Cozy Threads</h2>
-            <p class="tagline">Where Clean Clothes Meet Winter Warmth.</p>
-            <p class="extras">Affordable • Reliable • Comfortable</p>
+            <h2>Cozy Threads</h2>
+            <p>Where Clean Clothes Meet Winter Warmth.</p>
+            <p>Affordable • Reliable • Comfortable</p>
         </div>
 
     </div>
 
-    <p class="copyright">
-        © 2026 Cozy Threads — All Rights Reserved
-    </p>
+    <p class="copyright">© 2026 Cozy Threads — All Rights Reserved</p>
 
 </footer>
 
