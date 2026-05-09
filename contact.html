@@ -221,35 +221,39 @@ button:hover {
     <div class="card">
         <h2>Contact Form</h2>
 
-        <form>
+        <form action="https://formsubmit.co/thulim.belina@gmail.co" method="POST">
 
-            <label>Name</label>
-            <input type="text" required>
+    <input type="hidden" name="_subject" value="New Contact Message - Cozy Threads">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-            <label>Surname</label>
-            <input type="text" required>
+    <label>Name</label>
+    <input type="text" name="name" required>
 
-            <label>WhatsApp Number</label>
-            <input type="text" required>
+    <label>Surname</label>
+    <input type="text" name="surname" required>
 
-            <label>Email (Optional)</label>
-            <input type="email">
+    <label>WhatsApp Number</label>
+    <input type="text" name="whatsapp" required>
 
-            <label>How did you hear about us?</label>
-            <select>
-                <option>Facebook</option>
-                <option>Instagram</option>
-                <option>Friend</option>
-                <option>Walk-in</option>
-                <option>Other</option>
-            </select>
+    <label>Email (Optional)</label>
+    <input type="email" name="email">
 
-            <label>Note</label>
-            <textarea rows="4"></textarea>
+    <label>How did you hear about us?</label>
+    <select name="source">
+        <option>Facebook</option>
+        <option>Instagram</option>
+        <option>Friend</option>
+        <option>Walk-in</option>
+        <option>Other</option>
+    </select>
 
-            <button type="submit">Send Message</button>
+    <label>Note</label>
+    <textarea name="message" rows="4"></textarea>
 
-        </form>
+    <button type="submit">Send Message</button>
+
+</form>
     </div>
 
 </div>
