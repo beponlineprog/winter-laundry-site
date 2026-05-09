@@ -6,96 +6,102 @@
 <title>Contact – Cozy Threads</title>
 
 <style>
-body { margin: 0; background: #f7f3e9; font-family: Arial; color: #4a3f35; }
-
-.navbar { background: #d8c3a5; padding: 15px 25px; display: flex; justify-content: space-between; }
-.navbar a { text-decoration: none; color: #4a3f35; font-weight: bold; }
-.navbar .nav-links { list-style: none; display: flex; gap: 20px; }
-.navbar .active { border-bottom: 2px solid #4a3f35; }
-
-.contact-box {
-    max-width: 650px;
-    margin: 60px auto;
-    background: #fff8ee;
-    padding: 40px;
-    border-radius: 14px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f3e9;
+    color: #4a3f35;
 }
 
-.contact-box h2 {
-    margin-bottom: 20px;
+/* NAVBAR */
+.navbar {
+    background: #d8c3a5;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar a {
+    color: #4a3f35;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* HEADER */
+.page-header {
     text-align: center;
+    padding: 60px 20px;
+}
+
+/* CONTACT CARD */
+.contact-card {
+    max-width: 600px;
+    margin: auto;
+    background: #fff8ee;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid #b4846c;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    color: #6b4f37;
 }
 
 .contact-info p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    margin: 10px 0;
+    font-size: 1rem;
 }
-/* ================= FOOTER (2 Columns) ================= */
+
+/* BUTTONS */
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px;
+    background: #d8c3a5;
+    color: #4a3f35;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #b89d84;
+}
+
+/* FOOTER */
 .footer {
     background: #d8c3a5;
-    padding: 50px 20px;
+    padding: 40px 20px;
     color: #4a3f35;
-    border-top: 4px solid #b4846c;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
-/* Wrapper for two columns */
-.footer-columns {
+.footer-grid {
+    display: grid;
     max-width: 1100px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    text-align: left;
-}
-
-/* Each column */
-.footer-col h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.footer-col p {
-    font-size: 1rem;
-    margin: 6px 0;
-}
-
-.footer-col .brand {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.footer-col .tagline {
-    font-style: italic;
-    margin-top: 5px;
-}
-
-.footer-col .extras {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Bottom copyright */
-.footer .copyright {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.95rem;
-    opacity: 0.7;
-}
-
-/* Responsive – switch to 1 column */
-@media (max-width: 700px) {
-    .footer-columns {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
@@ -107,39 +113,52 @@ body { margin: 0; background: #f7f3e9; font-family: Arial; color: #4a3f35; }
     </ul>
 </nav>
 
-<div class="contact-box">
-    <h2>Contact Us</h2>
+<!-- HEADER -->
+<header class="page-header">
+    <h1>Contact Us</h1>
+    <p>We’re here to help — reach out anytime!</p>
+</header>
+
+<!-- CONTACT CARD -->
+<div class="contact-card">
+    <h2>Get in Touch</h2>
+    <p>
+        We value every customer and are always ready to assist with questions, orders, laundry bookings, or winter essentials.
+        Contact us using any of the options below — we're happy to help!
+    </p>
+
     <div class="contact-info">
-        <p><strong>Phone:</strong> 081 000 0000</p>
-        <p><strong>Email:</strong> cozythreads@gmail.com</p>
-        <p><strong>Address:</strong> 35446 Ndumo Street, Etwatwa</p>
+        <p><strong>Email:</strong> thulim.belina@gmail.com</p>
+        <p><strong>WhatsApp:</strong> 078 819 0578</p>
+        <p><strong>Address:</strong> 3544 Ndumo Street, Etwatwa, 1519</p>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="contact-buttons">
+        <a class="btn" href="mailto:thulim.belina@gmail.com">Send Email</a>
+        <a class="btn" href="https://wa.me/27788190578" target="_blank">WhatsApp Us</a>
+        <a class="btn" href="https://www.google.com/maps?q=3544+Ndumo+Street,+Etwatwa" target="_blank">View on Map</a>
     </div>
 </div>
+
+<!-- FOOTER -->
 <footer class="footer">
-
-    <div class="footer-columns">
-
-        <!-- LEFT COLUMN -->
-        <div class="footer-col">
+    <div class="footer-grid">
+        <div>
             <h3>Contact Us</h3>
             <p>📞 078 819 0578</p>
             <p>✉ thulim.belina@gmail.com</p>
             <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
         </div>
 
-        <!-- RIGHT COLUMN -->
-        <div class="footer-col">
-            <h2 class="brand">Cozy Threads</h2>
-            <p class="tagline">Where Clean Clothes Meet Winter Warmth.</p>
-            <p class="extras">Affordable • Reliable • Comfortable</p>
+        <div>
+            <h3>Cozy Threads</h3>
+            <p>Where Clean Clothes Meet Winter Warmth.</p>
+            <p>Affordable • Reliable • Comfortable</p>
+            <p>© 2026 Cozy Threads — All Rights Reserved</p>
         </div>
-
     </div>
-
-    <p class="copyright">
-        © 2026 Cozy Threads — All Rights Reserved
-    </p>
-
 </footer>
+
 </body>
 </html>
