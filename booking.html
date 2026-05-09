@@ -4,15 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Booking – Cozy Threads</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body { margin: 0; font-family: Arial; background: #f7f3e9; color: #4a3f35; }
+
+.navbar { background: #d8c3a5; padding: 15px 25px; display: flex; justify-content: space-between; }
+.navbar a { text-decoration: none; color: #4a3f35; font-weight: bold; }
+.navbar .nav-links { list-style: none; display: flex; gap: 20px; }
+.navbar .active { border-bottom: 2px solid #4a3f35; }
+
+.page-header { text-align: center; padding: 50px 20px; }
+
+.booking-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
+}
+
+.card-box {
+    background: #fff8ee;
+    padding: 25px;
+    border-radius: 14px;
+    border-left: 6px solid #b4846c;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    display: block;
+    text-align: center;
+    background: #b4846c;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
 </head>
 
 <body>
-<style>
-<!-- ================= NAVBAR ================= -->
+
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
-
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -22,132 +58,31 @@
     </ul>
 </nav>
 
-<!-- ================= HEADER ================= -->
 <header class="page-header">
     <h1>Bookings</h1>
     <p>Choose your service and contact us easily</p>
 </header>
 
-<!-- ================= BOOKING SECTION ================= -->
 <section class="booking-container">
 
-    <!-- LEFT COLUMN -->
-    <div class="booking-left">
-
-        <div class="card-box">
-            <h2>🧺 Laundry Booking</h2>
-            <p>Professional wash, fold & iron service</p>
-
-            <a class="btn-primary"
-               target="_blank"
-               href="https://docs.google.com/forms/d/e/1FAIpQLSfUPWk16XdcwRhdn-cGVr4AH528pPA1-rGlybypo1eXlt4cGg/viewform?usp=publish-editor">
-                Book Laundry
-            </a>
-        </div>
-
-        <div class="card-box">
-            <h2>❄ Winter Essentials</h2>
-            <p>Warm clothing & winter accessories</p>
-
-            <a class="btn-primary"
-               target="_blank"
-               href="https://docs.google.com/forms/d/e/1FAIpQLScc6jKOE5szfXbqWtOMljwXxh3Z4z7SjRQjcQcWNnR13Ro53w/viewform?usp=publish-editor">
-                Order Winter Items
-            </a>
-        </div>
-
+    <div class="card-box">
+        <h2>🧺 Laundry Booking</h2>
+        <p>Wash • Fold • Iron</p>
+        <a class="btn-primary" href="#" target="_blank">Book Laundry</a>
     </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="booking-right">
-
-        <div class="card-box">
-            <h2>📞 Contact Us</h2>
-
-            <a class="btn-secondary" href="tel:0788190578">📱 Call / WhatsApp</a>
-            <a class="btn-secondary" href="mailto:thulim.belina@gmail.com">✉ Email Us</a>
-            <a class="btn-secondary" target="_blank"
-               href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519">
-                📍 Location
-            </a>
-
-            <p class="note">For more information feel free to contact us anytime.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= QUICK QUOTE SECTION ================= -->
-<section class="quote-section">
 
     <div class="card-box">
+        <h2>❄ Winter Essentials</h2>
+        <p>Get warm items delivered</p>
+        <a class="btn-primary" href="#" target="_blank">Order Winter Items</a>
+    </div>
 
-        <h2>🧾 Get a Quick Quote</h2>
-
-        <label for="category"><strong>Choose Category:</strong></label>
-        <select id="category">
-            <option value="">Select…</option>
-            <option value="beanies">Beanies</option>
-            <option value="gloves">Gloves</option>
-            <option value="medium_socks">Medium Warm Socks</option>
-            <option value="no_show_socks">No-Show Socks</option>
-            <option value="umbrella">Umbrella</option>
-        </select>
-
-        <div class="quote-items">
-
-            <!-- One item block -->
-            <div class="quote-item">
-                <label>
-                    <input type="checkbox">
-                    Beanies (R30 each / R75 for 3)
-                </label>
-                <input type="number" min="0" placeholder="Qty">
-            </div>
-
-            <div class="quote-item">
-                <label>
-                    <input type="checkbox">
-                    Gloves (R20 each / R50 for 3)
-                </label>
-                <input type="number" min="0" placeholder="Qty">
-            </div>
-
-            <div class="quote-item">
-                <label>
-                    <input type="checkbox">
-                    Medium Warm Socks (R30 / R75 for 3)
-                </label>
-                <input type="number" min="0" placeholder="Qty">
-            </div>
-
-            <div class="quote-item">
-                <label>
-                    <input type="checkbox">
-                    No-Show Socks (R20 / R50 for 3)
-                </label>
-                <input type="number" min="0" placeholder="Qty">
-            </div>
-
-            <div class="quote-item">
-                <label>
-                    <input type="checkbox">
-                    Umbrella (R65)
-                </label>
-                <input type="number" min="0" placeholder="Qty">
-            </div>
-
-        </div>
-
-        <div class="quote-buttons">
-            <button class="btn-primary">Get Quote</button>
-            <a class="btn-secondary" href="https://wa.me/0788190578">Book via WhatsApp</a>
-        </div>
-
+    <div class="card-box">
+        <h2>📞 Contact Us</h2>
+        <a class="btn-primary" href="contact.html">Go to Contact Page</a>
     </div>
 
 </section>
-</style>
+
 </body>
 </html>
