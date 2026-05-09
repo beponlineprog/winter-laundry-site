@@ -13,53 +13,91 @@ body {
     color: #4a3f35;
 }
 
-.navbar { background: #d8c3a5; padding: 15px 25px; display: flex; justify-content: space-between; }
-.navbar a { color: #4a3f35; text-decoration: none; font-weight: bold; }
-.navbar .nav-links { display: flex; list-style: none; gap: 20px; }
-.navbar .active { border-bottom: 2px solid #4a3f35; }
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #d8c3a5;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-.page-header { text-align: center; padding: 60px 20px; }
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
 
-.services-grid {
-    max-width: 1200px;
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    color: #4a3f35;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .active {
+    border-bottom: 2px solid #4a3f35;
+}
+
+/* ================= HEADER ================= */
+.page-header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* ================= SECTION WRAPPER ================= */
+.about-container {
+    max-width: 1100px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-    gap: 25px;
     padding: 20px;
 }
 
-.service-card {
+/* ================= CARD GRID ================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ================= CARD ================= */
+.card {
     background: #fff8ee;
     padding: 25px;
     border-radius: 14px;
-    border-left: 6px solid #b4846c;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 6px solid #b4846c;
+    transition: 0.3s ease;
 }
 
-.service-card h2 {
-    color: #6b4f37;
-    margin-bottom: 5px;
+.card:hover {
+    transform: translateY(-5px);
 }
+
+/* Titles */
+.card h2 {
+    color: #6b4f37;
+    margin-bottom: 10px;
+}
+
 .card h3 {
     margin-top: 15px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #6b4f37;
 }
 
+/* Paragraphs */
 .card p {
     margin-top: 5px;
     line-height: 1.6;
 }
-.tagline { color: #b4846c; font-weight: bold; margin-bottom: 15px; }
 
-.service-item {
-    background: #f2e8dc;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-/* ================= FOOTER (2 Columns) ================= */
+/* ================= FOOTER ================= */
 .footer {
     background: #d8c3a5;
     padding: 50px 20px;
@@ -68,27 +106,26 @@ body {
     margin-top: 60px;
 }
 
-/* Wrapper for two columns */
+/* 2 COLUMN FOOTER */
 .footer-columns {
     max-width: 1100px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    text-align: left;
 }
 
-/* Each column */
+/* COLUMN STYLE */
 .footer-col h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
 .footer-col p {
-    font-size: 1rem;
     margin: 6px 0;
 }
 
+/* BRAND */
 .footer-col .brand {
     font-size: 1.8rem;
     font-weight: bold;
@@ -96,34 +133,27 @@ body {
 
 .footer-col .tagline {
     font-style: italic;
-    margin-top: 5px;
 }
 
 .footer-col .extras {
-    margin-top: 10px;
     font-weight: bold;
+    margin-top: 8px;
 }
 
-/* Bottom copyright */
+/* COPYRIGHT */
 .footer .copyright {
     text-align: center;
-    margin-top: 40px;
-    font-size: 0.95rem;
+    margin-top: 30px;
+    font-size: 0.9rem;
     opacity: 0.7;
 }
 
-/* Responsive – switch to 1 column */
+/* MOBILE */
 @media (max-width: 700px) {
     .footer-columns {
         grid-template-columns: 1fr;
         text-align: center;
     }
-}
-
-.footer .copyright {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    opacity: 0.7;
 }
 </style>
 </head>
