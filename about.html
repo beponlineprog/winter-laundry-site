@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About – Cozy Threads</title>
+<title>About Us – Cozy Threads</title>
 
 <style>
+/* ========= GLOBAL ========= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,33 +14,95 @@ body {
     color: #4a3f35;
 }
 
+/* ========= NAVBAR ========= */
 .navbar {
     background: #d8c3a5;
     padding: 15px 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.navbar a { color: #4a3f35; text-decoration: none; font-weight: bold; }
-.navbar .nav-links { list-style: none; display: flex; gap: 20px; }
-.navbar .active { border-bottom: 2px solid #4a3f35; }
 
-.about-section {
-    max-width: 900px;
-    margin: 50px auto;
-    background: #fff8ee;
-    padding: 40px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a3f35;
 }
-.about-section h1 {
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #4a3f35;
+    font-weight: bold;
+}
+.navbar .nav-links .active {
+    border-bottom: 2px solid #4a3f35;
+}
+
+/* ========= PAGE HEADER ========= */
+.page-header {
     text-align: center;
-    margin-bottom: 20px;
+    padding: 70px 20px;
 }
-.about-section p {
-    line-height: 1.7;
+.page-header h1 {
+    font-size: 2.3rem;
+}
+.page-header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* ========= CONTENT SECTION ========= */
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
     font-size: 1.1rem;
 }
-    /* ================= FOOTER ================= */
+
+/* ========= CARD LAYOUT ========= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 5px solid #b4846c;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #4a3f35;
+}
+
+.card ul {
+    margin-top: 12px;
+    padding-left: 18px;
+}
+
+.card ul li {
+    margin-bottom: 6px;
+}
+
+/* ========= FOOTER ========= */
 .footer {
     background: #d8c3a5;
     text-align: center;
@@ -63,13 +126,11 @@ body {
     margin-top: 20px;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #4a3f35;
 }
 
 .footer .tagline {
     font-style: italic;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin: 5px 0;
 }
 
 .footer .extras {
@@ -82,11 +143,13 @@ body {
     font-size: 0.9rem;
     opacity: 0.7;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
@@ -98,13 +161,60 @@ body {
     </ul>
 </nav>
 
-<section class="about-section">
-    <h1>About Cozy Threads</h1>
+<!-- HEADER -->
+<header class="page-header">
+    <h1>About Us</h1>
+    <p>Warmth, Comfort & Care — All in One Place</p>
+</header>
+
+<!-- MAIN CONTENT -->
+<section class="about-container">
+
+    <h2>Welcome to Cozy Threads</h2>
     <p>
-        Cozy Threads brings warmth and convenience to your everyday life.
-        From laundry services to winter essentials, we serve the Etwatwa community with quality, affordability, and comfort.
+        Welcome to Winter Essentials & Laundry Services – your trusted destination for everyday
+        comfort, warmth, and care.
     </p>
+
+    <p>
+        We are a proudly service-driven business dedicated to keeping you warm in winter and your
+        clothes fresh, clean, and perfectly cared for all year round. Our focus is simple:
+        <strong>quality products, reliable service, and affordability you can count on.</strong>
+    </p>
+
+    <!-- CARD LAYOUT -->
+    <div class="cards">
+
+        <!-- Winter Essentials Card -->
+        <div class="card">
+            <h2>❄ Winter Essentials</h2>
+            <p>When the cold season arrives, we make sure you are fully prepared.</p>
+
+            <ul>
+                <li>Umbrellas for rainy and unpredictable weather</li>
+                <li>Beanies for warmth and style</li>
+                <li>No-show socks for a clean, comfortable fit</li>
+                <li>Long socks for extra warmth and protection</li>
+                <li>Gloves to keep your hands warm and cozy</li>
+            </ul>
+        </div>
+
+        <!-- Laundry Services Card -->
+        <div class="card">
+            <h2>🧺 Laundry Services</h2>
+            <p>Professional and convenient laundry solutions to make your life easier.</p>
+
+            <ul>
+                <li>Wash Only – clean and fresh laundry</li>
+                <li>Wash & Fold – washed and neatly folded</li>
+                <li>Wash, Fold & Iron – fully prepared and ready to wear</li>
+            </ul>
+        </div>
+
+    </div>
 </section>
+
+<!-- FOOTER -->
 <footer class="footer">
     <h3>Contact Us</h3>
 
@@ -119,5 +229,6 @@ body {
 
     <p class="copyright">© 2026 Cozy Threads — All Rights Reserved</p>
 </footer>
+
 </body>
 </html>
