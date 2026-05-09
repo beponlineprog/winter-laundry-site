@@ -1,163 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact – Cozy Threads</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – Cozy Threads</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f3e9;
-    color: #4a3f35;
-}
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+        }
 
-/* NAVBAR */
-.navbar {
-    background: #d8c3a5;
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-}
-.navbar a {
-    color: #4a3f35;
-    text-decoration: none;
-    font-weight: bold;
-}
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        a {
+            text-decoration: none;
+        }
 
-/* HEADER */
-.page-header {
-    text-align: center;
-    padding: 60px 20px;
-}
+        /* ========== NAVBAR ========== */
+        .navbar {
+            background: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-/* CONTACT CARD */
-.contact-card {
-    max-width: 600px;
-    margin: auto;
-    background: #fff8ee;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-left: 6px solid #b4846c;
-}
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+        }
 
-.contact-card h2 {
-    margin-top: 0;
-    color: #6b4f37;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
-.contact-info p {
-    margin: 10px 0;
-    font-size: 1rem;
-}
+        .nav-links a {
+            color: #444;
+            font-weight: 600;
+        }
 
-/* BUTTONS */
-.contact-buttons {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+        .nav-links a.active,
+        .nav-links a:hover {
+            color: #0099cc;
+        }
 
-.btn {
-    padding: 12px;
-    background: #d8c3a5;
-    color: #4a3f35;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.2s;
-}
+        /* ========== CONTACT SECTION ========== */
+        .contact-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-.btn:hover {
-    background: #b89d84;
-}
+        .contact-section h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
 
-/* FOOTER */
-.footer {
-    background: #d8c3a5;
-    padding: 40px 20px;
-    color: #4a3f35;
-    margin-top: 50px;
-}
+        .description {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #555;
+        }
 
-.footer-grid {
-    display: grid;
-    max-width: 1100px;
-    margin: auto;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-</style>
+        .contact-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* ========== CARDS ========== */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 340px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #0099cc;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn-group {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background: #0099cc;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background: #007da3;
+        }
+
+        /* ========== FORM ========== */
+        .form-card form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .submit-btn {
+            background: #00a86b;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #008c59;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+    </style>
 
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="booking.html">Booking</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
 </nav>
 
-<!-- HEADER -->
-<header class="page-header">
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+
     <h1>Contact Us</h1>
-    <p>We’re here to help — reach out anytime!</p>
-</header>
+    <p class="description">Get in touch with us for inquiries, bookings, or custom orders.</p>
 
-<!-- CONTACT CARD -->
-<div class="contact-card">
-    <h2>Get in Touch</h2>
-    <p>
-        We value every customer and are always ready to assist with questions, orders, laundry bookings, or winter essentials.
-        Contact us using any of the options below — we're happy to help!
-    </p>
+    <div class="contact-container">
 
-    <div class="contact-info">
-        <p><strong>Email:</strong> thulim.belina@gmail.com</p>
-        <p><strong>WhatsApp:</strong> 078 819 0578</p>
-        <p><strong>Address:</strong> 3544 Ndumo Street, Etwatwa, 1519</p>
-    </div>
+        <!-- ===== CONTACT INFO CARD ===== -->
+        <div class="card contact-card">
+            <h2>Reach Us</h2>
+            <p><strong>Email:</strong> thulim.belina@gmail.co</p>
+            <p><strong>WhatsApp:</strong> 078 819 0578</p>
+            <p><strong>Address:</strong> 3544 Ndumo Street, Etwatwa, 1519</p>
 
-    <!-- BUTTONS -->
-    <div class="contact-buttons">
-        <a class="btn" href="mailto:thulim.belina@gmail.com">Send Email</a>
-        <a class="btn" href="https://wa.me/27788190578" target="_blank">WhatsApp Us</a>
-        <a class="btn" href="https://www.google.com/maps?q=3544+Ndumo+Street,+Etwatwa" target="_blank">View on Map</a>
-    </div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div>
-            <h3>Contact Us</h3>
-            <p>📞 078 819 0578</p>
-            <p>✉ thulim.belina@gmail.com</p>
-            <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
+            <div class="btn-group">
+                <a href="mailto:thulim.belina@gmail.co" class="btn">Email Us</a>
+                <a href="https://wa.me/27788190578" class="btn">WhatsApp Chat</a>
+                <a href="booking.html" class="btn">Make a Booking</a>
+            </div>
         </div>
 
-        <div>
-            <h3>Cozy Threads</h3>
-            <p>Where Clean Clothes Meet Winter Warmth.</p>
-            <p>Affordable • Reliable • Comfortable</p>
-            <p>© 2026 Cozy Threads — All Rights Reserved</p>
+        <!-- ===== CONTACT FORM CARD ===== -->
+        <div class="card form-card">
+            <h2>Send Us a Message</h2>
+
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="First Name" required>
+                <input type="text" name="surname" placeholder="Surname" required>
+                <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
+                <input type="email" name="email" placeholder="Email (Optional)">
+                
+                <select name="referral" required>
+                    <option value="">How did you hear about us?</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="friend">Friend / Referral</option>
+                    <option value="walk-in">Walk-in</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <textarea name="note" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
+
     </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2026 Cozy Threads — All Rights Reserved
 </footer>
 
 </body>
