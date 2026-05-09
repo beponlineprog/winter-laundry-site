@@ -24,20 +24,13 @@ body {
     align-items: center;
 }
 
-.navbar .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
 .navbar .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
-.navbar .nav-links a {
+.navbar a {
     text-decoration: none;
     color: #4a3f35;
     font-weight: bold;
@@ -71,79 +64,56 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.card-box h2 {
-    margin-bottom: 10px;
-}
-
-.card-box p {
-    margin-bottom: 15px;
-}
-
 .btn-primary {
-    display: block;
-    text-align: center;
+    display: inline-block;
+    padding: 12px 16px;
     background: #b4846c;
-    color: white;
-    padding: 12px;
-    border-radius: 10px;
+    color: white !important;
     text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.btn-primary:hover {
-    background: #9c6f56;
-}
-
-/* ================= FORM SECTION ================= */
+/* ================= FORMS ================= */
 .form-section {
-    padding: 50px 20px;
-}
-
-.form-container {
-    max-width: 650px;
-    margin: auto;
+    max-width: 800px;
+    margin: 40px auto;
     background: #fff8ee;
-    padding: 30px;
+    padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border-left: 6px solid #b4846c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: none;       /* HIDDEN BY DEFAULT */
+    opacity: 0;
+    transition: 0.4s;
 }
 
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.form-container p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #6b4f37;
-}
-
-label {
-    font-weight: bold;
+.form-section.show {
     display: block;
-    margin-top: 10px;
+    opacity: 1;
+    margin-top: 20px;
 }
 
-input, select, textarea {
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 15px;
-    border: 1px solid #d8c3a5;
-    border-radius: 8px;
+    border: 1px solid #b7a693;
+    border-radius: 6px;
+    margin-top: 5px;
+    background: #f9f5ef;
 }
 
-h3 {
+form button {
     margin-top: 20px;
-    color: #6b4f37;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: #b4846c;
+    padding: 12px 18px;
+    background: #6b4f37;
     color: white;
     border: none;
     border-radius: 8px;
@@ -151,40 +121,23 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background: #9c6f56;
+h3 {
+    margin-top: 25px;
+    color: #6b4f37;
 }
 
 /* ================= FOOTER ================= */
 .footer {
     background: #d8c3a5;
-    padding: 50px 20px;
-    margin-top: 60px;
-    border-top: 4px solid #b4846c;
-    color: #4a3f35;
-}
-
-.footer-columns {
-    max-width: 1100px;
-    margin: auto;
+    padding: 40px 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.footer .copyright {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-    .footer-columns {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+.footer p, .footer h3 {
+    margin: 5px 0;
 }
 
 </style>
@@ -192,7 +145,7 @@ button:hover {
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
@@ -204,168 +157,170 @@ button:hover {
     </ul>
 </nav>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="page-header">
     <h1>Bookings</h1>
-    <p>Book laundry or order winter essentials easily</p>
+    <p>Choose your service and submit your details easily</p>
 </header>
 
 <!-- ================= BOOKING CARDS ================= -->
-<section class="booking-container">
+<div class="booking-container">
 
     <div class="card-box">
         <h2>🧺 Laundry Booking</h2>
-        <p>Wash • Fold • Iron services</p>
-        <a class="btn-primary" href="#laundryForm">Book Laundry</a>
+        <p>Professional wash, fold & iron service</p>
+        <span onclick="showForm('laundryForm')" class="btn-primary">Book Laundry</span>
     </div>
 
     <div class="card-box">
         <h2>❄ Winter Essentials</h2>
-        <p>Warm clothing & accessories</p>
-        <a class="btn-primary" href="#winterForm">Order Winter Items</a>
+        <p>Order warm & comfortable items</p>
+        <span onclick="showForm('winterForm')" class="btn-primary">Order Winter Items</span>
     </div>
 
-</section>
+</div>
 
 <!-- ================= LAUNDRY FORM ================= -->
 <section id="laundryForm" class="form-section">
 
-    <div class="form-container">
+    <h2>🧺 Laundry Booking Form</h2>
 
-        <h2>🧺 Laundry Booking</h2>
-        <p>Fill in your details</p>
+    <form>
 
-        <form>
+        <label>Name</label>
+        <input type="text" required>
 
-            <label>Name</label>
-            <input type="text" required>
+        <label>Surname</label>
+        <input type="text" required>
 
-            <label>Surname</label>
-            <input type="text" required>
+        <label>WhatsApp Number</label>
+        <input type="tel" required>
 
-            <label>WhatsApp Number</label>
-            <input type="tel" required>
+        <label>Category</label>
+        <select required>
+            <option value="">Select service</option>
+            <option>Wash Only</option>
+            <option>Wash & Fold</option>
+            <option>Wash, Fold & Iron</option>
+        </select>
 
-            <label>Category</label>
-            <select required>
-                <option value="">Select service</option>
-                <option>Wash Only</option>
-                <option>Wash & Fold</option>
-                <option>Wash, Fold & Iron</option>
-            </select>
+        <label>Basket Size</label>
+        <select required>
+            <option value="">Select basket</option>
+            <option>Small Basket</option>
+            <option>Medium Basket</option>
+            <option>Large Basket</option>
+        </select>
 
-            <label>Basket Size</label>
-            <select required>
-                <option value="">Select basket</option>
-                <option>Small Basket</option>
-                <option>Medium Basket</option>
-                <option>Large Basket</option>
-            </select>
+        <label>Special Note (Optional)</label>
+        <textarea rows="3"></textarea>
 
-            <label>Special Note (Optional)</label>
-            <textarea rows="4"></textarea>
+        <button type="submit">Submit Laundry Booking</button>
 
-            <button type="submit">Submit Laundry Booking</button>
-
-        </form>
-
-    </div>
+    </form>
 
 </section>
 
 <!-- ================= WINTER FORM ================= -->
 <section id="winterForm" class="form-section">
 
-    <div class="form-container">
+    <h2>❄ Winter Essentials Order Form</h2>
 
-        <h2>❄ Winter Essentials Order</h2>
-        <p>Order your winter items</p>
+    <form>
 
-        <form>
+        <label>Name</label>
+        <input type="text" required>
 
-            <label>Name</label>
-            <input type="text" required>
+        <label>Surname</label>
+        <input type="text" required>
 
-            <label>Surname</label>
-            <input type="text" required>
+        <label>WhatsApp Number</label>
+        <input type="tel" required>
 
-            <label>WhatsApp Number</label>
-            <input type="tel" required>
+        <!-- SOCKS -->
+        <h3>Socks</h3>
 
-            <h3>Socks Type (Multiple Select)</h3>
-            <select multiple size="3">
-                <option>No-Show Socks</option>
-                <option>Normal Socks</option>
-                <option>Long Socks</option>
-            </select>
+        <label>Type</label>
+        <select multiple>
+            <option>No-Show Socks</option>
+            <option>Normal Socks</option>
+            <option>Long Socks</option>
+        </select>
 
-            <h3>Socks Colour</h3>
-            <select multiple size="5">
-                <option>White</option>
-                <option>Blue</option>
-                <option>Black</option>
-                <option>Maroon</option>
-                <option>Grey</option>
-            </select>
+        <label>Colour</label>
+        <select multiple>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Black</option>
+            <option>Maroon</option>
+            <option>Grey</option>
+        </select>
 
-            <label>Socks Quantity</label>
-            <input type="number" min="1">
+        <label>Quantity</label>
+        <input type="number" min="1">
 
-            <h3>Beanies Colour</h3>
-            <select multiple size="5">
-                <option>White</option>
-                <option>Blue</option>
-                <option>Black</option>
-                <option>Maroon</option>
-                <option>Grey</option>
-            </select>
+        <!-- BEANIES -->
+        <h3>Beanies</h3>
 
-            <label>Beanies Quantity</label>
-            <input type="number" min="1">
+        <label>Colour</label>
+        <select multiple>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Black</option>
+            <option>Maroon</option>
+            <option>Grey</option>
+        </select>
 
-            <h3>Gloves Colour</h3>
-            <select multiple size="5">
-                <option>White</option>
-                <option>Blue</option>
-                <option>Black</option>
-                <option>Maroon</option>
-                <option>Grey</option>
-            </select>
+        <label>Quantity</label>
+        <input type="number" min="1">
 
-            <label>Gloves Quantity</label>
-            <input type="number" min="1">
+        <!-- GLOVES -->
+        <h3>Gloves</h3>
 
-            <button type="submit">Place Winter Order</button>
+        <label>Colour</label>
+        <select multiple>
+            <option>White</option>
+            <option>Blue</option>
+            <option>Black</option>
+            <option>Maroon</option>
+            <option>Grey</option>
+        </select>
 
-        </form>
+        <label>Quantity</label>
+        <input type="number" min="1">
 
-    </div>
+        <button type="submit">Submit Winter Order</button>
+
+    </form>
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-
-    <div class="footer-columns">
-
-        <div>
-            <h3>Contact Us</h3>
-            <p>📞 078 819 0578</p>
-            <p>✉ thulim.belina@gmail.com</p>
-            <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
-        </div>
-
-        <div>
-            <h2>Cozy Threads</h2>
-            <p>Where Clean Clothes Meet Winter Warmth.</p>
-            <p>Affordable • Reliable • Comfortable</p>
-        </div>
-
+    <div>
+        <h3>Contact Us</h3>
+        <p>📞 078 819 0578</p>
+        <p>✉ thulim.belina@gmail.com</p>
+        <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
     </div>
 
-    <p class="copyright">© 2026 Cozy Threads — All Rights Reserved</p>
-
+    <div>
+        <h3>Cozy Threads</h3>
+        <p>Where Clean Clothes Meet Winter Warmth.</p>
+        <p>Affordable • Reliable • Comfortable</p>
+        <p>© 2026 Cozy Threads — All Rights Reserved</p>
+    </div>
 </footer>
 
+<!-- ================= JS: SHOW FORM ================= -->
+<script>
+function showForm(id) {
+    document.getElementById("laundryForm").classList.remove("show");
+    document.getElementById("winterForm").classList.remove("show");
+    document.getElementById(id).classList.add("show");
+    window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: "smooth" });
+}
+</script>
+
 </body>
-                </html>
+</html>
