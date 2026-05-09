@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services – Cozy Threads</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services – Cozy Threads</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f3e9;
+    color: #4a3f35;
+}
+
+.navbar { background: #d8c3a5; padding: 15px 25px; display: flex; justify-content: space-between; }
+.navbar a { color: #4a3f35; text-decoration: none; font-weight: bold; }
+.navbar .nav-links { display: flex; list-style: none; gap: 20px; }
+.navbar .active { border-bottom: 2px solid #4a3f35; }
+
+.page-header { text-align: center; padding: 60px 20px; }
+
+.services-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.service-card {
+    background: #fff8ee;
+    padding: 25px;
+    border-radius: 14px;
+    border-left: 6px solid #b4846c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.service-card h2 {
+    color: #6b4f37;
+    margin-bottom: 5px;
+}
+
+.tagline { color: #b4846c; font-weight: bold; margin-bottom: 15px; }
+
+.service-item {
+    background: #f2e8dc;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
@@ -21,129 +66,23 @@
     </ul>
 </nav>
 
-<!-- ================= PAGE HEADER ================= -->
 <header class="page-header">
     <h1>Our Services</h1>
-    <p>Where Clean Clothes Meet Winter Warmth</p>
+    <p>Warmth, comfort & clean clothes — all in one place</p>
 </header>
 
-<!-- ================= SERVICES SECTION ================= -->
-<section class="services-section">
-    <div class="services-grid">
+<section class="services-grid">
 
-        <!-- WINTER ESSENTIALS -->
-        <div class="service-card">
-            <h2>❄ Winter Essentials</h2>
-            <p class="tagline">Warm • Comfortable • Affordable</p>
+    <div class="service-card">
+        <h2>❄ Winter Essentials</h2>
+        <p class="tagline">Warm • Soft • Affordable</p>
 
-            <div class="service-item">
-                <h3>No-Show Socks</h3>
-                <p>Low cut • Comfy fit</p>
-                <strong>3 pairs – R35 | 1 pair – R15</strong>
-            </div>
-
-            <div class="service-item">
-                <h3>Warm Gloves</h3>
-                <p>Soft • Stretchy • Warm</p>
-                <strong>3 pairs – R45 | 1 pair – R20</strong>
-            </div>
-
-            <div class="service-item">
-                <h3>Thick Long Socks</h3>
-                <p>Durable • Extra warm</p>
-                <strong>3 pairs – R60 | 1 pair – R30</strong>
-            </div>
-        </div>
-
-        <!-- Add more cards below the same way -->
-
+        <div class="service-item"><h3>No-show Socks</h3><strong>3 pairs – R35</strong></div>
+        <div class="service-item"><h3>Warm Gloves</h3><strong>3 pairs – R45</strong></div>
+        <div class="service-item"><h3>Thick Long Socks</h3><strong>3 pairs – R60</strong></div>
     </div>
-</section>
-        <!-- ================= LAUNDRY SERVICES ================= -->
-        <div class="service-card">
-            <h2>🧺 Laundry Services</h2>
-            <p class="tagline">Fresh • Clean • Convenient</p>
 
-            <div class="service-item">
-                <h3>Wash Only</h3>
-                <p>Quick & affordable wash service.</p>
-                <strong>From R40</strong>
-            </div>
-
-            <div class="service-item">
-                <h3>Wash & Fold</h3>
-                <p>Washed, dried & neatly folded.</p>
-                <strong>From R60</strong>
-            </div>
-
-            <div class="service-item">
-                <h3>Wash, Fold & Iron</h3>
-                <p>The complete laundry service.</p>
-                <strong>From R90</strong>
-            </div>
-
-        </div>
-
-    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- QUICK LINKS -->
-        <div class="footer-column">
-            <h3>Quick Links</h3>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="booking.html">Booking</a>
-            <a href="contact.html">Contact</a>
-        </div>
-
-        <!-- SERVICES -->
-        <div class="footer-column">
-            <h3>Our Services</h3>
-            <p>🧺 Wash Only</p>
-            <p>🧺 Wash & Fold</p>
-            <p>🧺 Wash, Fold & Iron</p>
-            <p>❄ Winter Essentials</p>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-
-            <a href="tel:0788190578">📞 078 819 0578</a>
-
-            <a href="mailto:thulim.belina@gmail.com">✉ thulim.belina@gmail.com</a>
-
-            <a href="https://www.google.com/maps/search/?api=1&query=35446+Ndumo+Street+Etwatwa+1519" target="_blank">
-                📍 35446 Ndumo Street, Etwatwa 1519
-            </a>
-        </div>
-
-        <!-- BRAND -->
-        <div class="footer-column">
-            <h3>Cozy Threads</h3>
-            <p>Where Clean Clothes Meet Winter Warmth.</p>
-            <p>Affordable • Reliable • Comfortable</p>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 Cozy Threads — All Rights Reserved
-    </div>
-
-</footer>
-
-<!-- ================= WHATSAPP FLOAT ================= -->
-<a class="whatsapp-float"
-href="https://wa.me/27788190578?text=Hello%20Cozy%20Threads%20👋%20I%20need%20help"
-target="_blank">
-💬
-</a>
 </body>
 </html>
