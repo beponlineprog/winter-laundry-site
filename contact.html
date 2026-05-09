@@ -1,164 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – Cozy Threads</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – Cozy Threads</title>
 
-    <style>
-        /* ========== GLOBAL STYLES ========== */
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f5f5;
-        }
+<style>
 
-        a {
-            text-decoration: none;
-        }
+/* ================= BASE ================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f3e9;
+    color: #4a3f35;
+}
 
-        /* ========== NAVBAR ========== */
-        .navbar {
-            background: #ffffff;
-            padding: 15px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #d8c3a5;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #222;
-        }
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
 
-        .nav-links a {
-            color: #444;
-            font-weight: 600;
-        }
+.navbar a {
+    text-decoration: none;
+    color: #4a3f35;
+    font-weight: bold;
+}
 
-        .nav-links a.active,
-        .nav-links a:hover {
-            color: #0099cc;
-        }
+/* ================= HEADER ================= */
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+}
 
-        /* ========== CONTACT SECTION ========== */
-        .contact-section {
-            padding: 50px 20px;
-            text-align: center;
-        }
+.page-header h1 {
+    margin-bottom: 5px;
+}
 
-        .contact-section h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
+/* ================= CONTACT CARDS ================= */
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
 
-        .description {
-            font-size: 16px;
-            margin-bottom: 40px;
-            color: #555;
-        }
+.card {
+    background: #fff8ee;
+    padding: 25px;
+    border-radius: 14px;
+    border-left: 6px solid #b4846c;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-        .contact-container {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.card h2 {
+    margin-top: 0;
+    color: #6b4f37;
+}
 
-        /* ========== CARDS ========== */
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            width: 340px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: left;
-        }
+/* ================= FORM ================= */
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-        .card h2 {
-            margin-top: 0;
-            color: #0099cc;
-        }
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
 
-        /* ========== BUTTONS ========== */
-        .btn-group {
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+input, select, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #d8c3a5;
+    border-radius: 8px;
+    background: #fffdf8;
+}
 
-        .btn {
-            display: block;
-            text-align: center;
-            padding: 10px;
-            background: #0099cc;
-            color: white;
-            font-weight: bold;
-            border-radius: 6px;
-        }
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #b4846c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        .btn:hover {
-            background: #007da3;
-        }
+button:hover {
+    background: #9c6f56;
+}
 
-        /* ========== FORM ========== */
-        .form-card form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+/* ================= BUTTONS ================= */
+.btn {
+    display: block;
+    text-align: center;
+    background: #d8c3a5;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #4a3f35;
+    font-weight: bold;
+}
 
-        input, select, textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            width: 100%;
-            font-size: 14px;
-        }
+/* ================= FOOTER (2 COLUMN CREAM) ================= */
+.footer {
+    background: #d8c3a5;
+    padding: 50px 20px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #b4846c;
+    color: #4a3f35;
+}
 
-        textarea {
-            height: 100px;
-        }
+.footer-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
 
-        .submit-btn {
-            background: #00a86b;
-            color: white;
-            border: none;
-            padding: 12px;
-            font-size: 16px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+/* Footer headings */
+.footer h3 {
+    margin-bottom: 10px;
+    color: #6b4f37;
+}
 
-        .submit-btn:hover {
-            background: #008c59;
-        }
+/* Footer text */
+.footer p {
+    margin: 6px 0;
+}
 
-        /* ========== FOOTER ========== */
-        footer {
-            background: #222;
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
-            margin-top: 40px;
-        }
+/* Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    opacity: 0.8;
+}
 
-    </style>
+/* ================= MOBILE ================= */
+@media (max-width: 700px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
 
+</style>
 </head>
+
 <body>
 
 <!-- ================= NAVBAR ================= -->
@@ -168,68 +177,78 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="booking.html">Booking</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
-<!-- ================= CONTACT SECTION ================= -->
-<section class="contact-section">
-
+<!-- ================= HEADER ================= -->
+<div class="page-header">
     <h1>Contact Us</h1>
-    <p class="description">Get in touch with us for inquiries, bookings, or custom orders.</p>
+    <p>We are here to help you anytime</p>
+</div>
 
-    <div class="contact-container">
+<!-- ================= CONTACT CARDS ================= -->
+<div class="contact-container">
 
-        <!-- ===== CONTACT INFO CARD ===== -->
-        <div class="card contact-card">
-            <h2>Reach Us</h2>
-            <p><strong>Email:</strong> thulim.belina@gmail.co</p>
-            <p><strong>WhatsApp:</strong> 078 819 0578</p>
-            <p><strong>Address:</strong> 3544 Ndumo Street, Etwatwa, 1519</p>
+    <!-- INFO CARD -->
+    <div class="card">
+        <h2>Get in Touch</h2>
 
-            <div class="btn-group">
-                <a href="mailto:thulim.belina@gmail.co" class="btn">Email Us</a>
-                <a href="https://wa.me/27788190578" class="btn">WhatsApp Chat</a>
-                <a href="booking.html" class="btn">Make a Booking</a>
-            </div>
-        </div>
+        <p>📞 078 819 0578</p>
+        <p>✉ thulim.belina@gmail.com</p>
+        <p>📍 3544 Ndumo Street, Etwatwa 1519</p>
 
-        <!-- ===== CONTACT FORM CARD ===== -->
-        <div class="card form-card">
-            <h2>Send Us a Message</h2>
-
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="First Name" required>
-                <input type="text" name="surname" placeholder="Surname" required>
-                <input type="text" name="whatsapp" placeholder="WhatsApp Number" required>
-                <input type="email" name="email" placeholder="Email (Optional)">
-                
-                <select name="referral" required>
-                    <option value="">How did you hear about us?</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="friend">Friend / Referral</option>
-                    <option value="walk-in">Walk-in</option>
-                    <option value="other">Other</option>
-                </select>
-
-                <textarea name="note" placeholder="Write your message here..." required></textarea>
-
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-
+        <a class="btn" href="https://wa.me/27788190578">WhatsApp Us</a>
+        <a class="btn" href="mailto:thulim.belina@gmail.com">Send Email</a>
     </div>
-</section>
 
-<!-<!-- FOOTER -->
+    <!-- FORM CARD -->
+    <div class="card">
+        <h2>Contact Form</h2>
+
+        <form>
+
+            <label>Name</label>
+            <input type="text" required>
+
+            <label>Surname</label>
+            <input type="text" required>
+
+            <label>WhatsApp Number</label>
+            <input type="text" required>
+
+            <label>Email (Optional)</label>
+            <input type="email">
+
+            <label>How did you hear about us?</label>
+            <select>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>Friend</option>
+                <option>Walk-in</option>
+                <option>Other</option>
+            </select>
+
+            <label>Note</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+    </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
+
     <div class="footer-grid">
+
         <div>
             <h3>Contact Us</h3>
             <p>📞 078 819 0578</p>
             <p>✉ thulim.belina@gmail.com</p>
-            <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
+            <p>📍 3544 Ndumo Street, Etwatwa 1519</p>
         </div>
 
         <div>
@@ -238,7 +257,13 @@
             <p>Affordable • Reliable • Comfortable</p>
             <p>© 2026 Cozy Threads — All Rights Reserved</p>
         </div>
+
     </div>
+
+    <div class="footer-bottom">
+        Built with care for our customers
+    </div>
+
 </footer>
 
 </body>
