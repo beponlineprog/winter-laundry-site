@@ -251,3 +251,90 @@ button:hover {
         padding: 25px;
     }
 }
+/* ================= SERVICES SECTION ================= */
+
+.services-section {
+    padding: 60px 20px;
+    background: #f8f8f8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= SERVICE CARD ================= */
+
+.service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    border-top: 5px solid #4a90e2;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Title */
+.service-card h2 {
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Tagline */
+.service-card .tagline {
+    color: #4a90e2;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+/* Item Box */
+.service-item {
+    background: #f1f5f9;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.service-item:hover {
+    background: #e3edf7;
+}
+
+.service-item h3 {
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.service-item p {
+    margin: 2px 0 6px;
+    color: #555;
+}
+
+.service-item strong {
+    color: #000;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #555;
+   }
