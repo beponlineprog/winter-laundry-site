@@ -53,11 +53,7 @@ body {
     padding: 60px 20px;
 }
 
-.page-header h1 {
-    font-size: 2.2rem;
-}
-
-/* ================= BOOKING CARDS ================= */
+/* ================= BUTTON CARDS ================= */
 .booking-container {
     max-width: 1100px;
     margin: auto;
@@ -83,7 +79,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* BUTTON */
 .btn-primary {
     display: block;
     text-align: center;
@@ -101,11 +96,11 @@ body {
 
 /* ================= FORM SECTION ================= */
 .form-section {
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
 .form-container {
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
     background: #fff8ee;
     padding: 30px;
@@ -127,14 +122,22 @@ body {
 
 label {
     font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0 15px;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
     border: 1px solid #d8c3a5;
     border-radius: 8px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #6b4f37;
 }
 
 button {
@@ -204,39 +207,33 @@ button:hover {
 <!-- HEADER -->
 <header class="page-header">
     <h1>Bookings</h1>
-    <p>Choose your service and book easily</p>
+    <p>Book laundry or order winter essentials easily</p>
 </header>
 
-<!-- BOOKING CARDS -->
+<!-- ================= BOOKING CARDS ================= -->
 <section class="booking-container">
 
     <div class="card-box">
         <h2>🧺 Laundry Booking</h2>
-        <p>Wash, Fold & Iron services available</p>
+        <p>Wash • Fold • Iron services</p>
         <a class="btn-primary" href="#laundryForm">Book Laundry</a>
     </div>
 
     <div class="card-box">
         <h2>❄ Winter Essentials</h2>
         <p>Warm clothing & accessories</p>
-        <a class="btn-primary" href="services.html">View Items</a>
-    </div>
-
-    <div class="card-box">
-        <h2>📞 Contact Us</h2>
-        <p>Need help? Contact us anytime</p>
-        <a class="btn-primary" href="contact.html">Go to Contact</a>
+        <a class="btn-primary" href="#winterForm">Order Winter Items</a>
     </div>
 
 </section>
 
-<!-- FORM SECTION -->
+<!-- ================= LAUNDRY FORM ================= -->
 <section id="laundryForm" class="form-section">
 
     <div class="form-container">
 
-        <h2>🧺 Laundry Booking Form</h2>
-        <p>Fill in your details below</p>
+        <h2>🧺 Laundry Booking</h2>
+        <p>Fill in your details</p>
 
         <form>
 
@@ -247,7 +244,7 @@ button:hover {
             <input type="text" required>
 
             <label>WhatsApp Number</label>
-            <input type="tel" placeholder="078 000 0000" required>
+            <input type="tel" required>
 
             <label>Category</label>
             <select required>
@@ -259,13 +256,86 @@ button:hover {
 
             <label>Basket Size</label>
             <select required>
-                <option value="">Select basket size</option>
+                <option value="">Select basket</option>
                 <option>Small Basket</option>
                 <option>Medium Basket</option>
                 <option>Large Basket</option>
             </select>
 
-            <button type="submit">Submit Booking</button>
+            <label>Special Note (Optional)</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Submit Laundry Booking</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= WINTER FORM ================= -->
+<section id="winterForm" class="form-section">
+
+    <div class="form-container">
+
+        <h2>❄ Winter Essentials Order</h2>
+        <p>Order your winter items</p>
+
+        <form>
+
+            <label>Name</label>
+            <input type="text" required>
+
+            <label>Surname</label>
+            <input type="text" required>
+
+            <label>WhatsApp Number</label>
+            <input type="tel" required>
+
+            <h3>Socks Type (Multiple Select)</h3>
+            <select multiple size="3">
+                <option>No-Show Socks</option>
+                <option>Normal Socks</option>
+                <option>Long Socks</option>
+            </select>
+
+            <h3>Socks Colour</h3>
+            <select multiple size="5">
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Maroon</option>
+                <option>Grey</option>
+            </select>
+
+            <label>Socks Quantity</label>
+            <input type="number" min="1">
+
+            <h3>Beanies Colour</h3>
+            <select multiple size="5">
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Maroon</option>
+                <option>Grey</option>
+            </select>
+
+            <label>Beanies Quantity</label>
+            <input type="number" min="1">
+
+            <h3>Gloves Colour</h3>
+            <select multiple size="5">
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Maroon</option>
+                <option>Grey</option>
+            </select>
+
+            <label>Gloves Quantity</label>
+            <input type="number" min="1">
+
+            <button type="submit">Place Winter Order</button>
 
         </form>
 
@@ -298,4 +368,4 @@ button:hover {
 </footer>
 
 </body>
-</html>
+                </html>
