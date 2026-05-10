@@ -1,73 +1,102 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Laundry Prices</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laundry Price List – Cozy Threads</title>
 
 <style>
 body {
-    font-family: Arial;
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #f7f3e9;
     color: #4a3f35;
+}
+
+/* HEADER */
+.page-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #d8c3a5;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
     padding: 20px;
 }
 
-.box {
-    max-width: 600px;
-    margin: auto;
+.price-box {
     background: #fff8ee;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
+    margin-bottom: 25px;
     border-left: 6px solid #b4846c;
 }
 
-.btn {
+/* BUTTON */
+.download-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
+    padding: 12px 20px;
     background: #b4846c;
     color: white;
+    border-radius: 10px;
+    margin-top: 20px;
     text-decoration: none;
-    border-radius: 8px;
+    font-weight: bold;
 }
-    .footer {
-    background: #d8c3a5;
-    padding: 50px 20px;
-    color: #4a3f35;
-    border-top: 4px solid #b4846c;
-    margin-top: 50px;
+.download-btn:hover {
+    background: #6b4f37;
 }
 
+/* FOOTER */
+.footer {
+    background: #d8c3a5;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
 .footer-grid {
-    max-width: 1100px;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 25px;
 }
-
-.footer-grid h3 {
-    margin-bottom: 10px;
-    color: #4a3f35;
-}
-
-.footer-grid p {
-    margin: 5px 0;
-}
+.footer h3 { margin-top: 0; }
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="box">
-<h2>🧺 Laundry Price List</h2>
-
-<p><strong>Wash Only</strong><br>Small R90 | Medium R120 | Large R160</p>
-<p><strong>Wash & Fold</strong><br>Small R110 | Medium R150 | Large R200</p>
-<p><strong>Wash, Fold & Iron</strong><br>Small R140 | Medium R180 | Large R230</p>
-
-<a class="btn" href="services.html">⬅ Back</a>
+<div class="page-header">
+    <h1>Laundry Price List</h1>
 </div>
+
+<div class="container">
+
+    <div class="price-box">
+        <h2>Wash Only</h2>
+        <p>• Small basket — R90</p>
+        <p>• Medium basket — R120</p>
+        <p>• Large basket — R160</p>
+    </div>
+
+    <div class="price-box">
+        <h2>Wash & Fold</h2>
+        <p>• Small basket — R110</p>
+        <p>• Medium basket — R150</p>
+        <p>• Large basket — R200</p>
+    </div>
+
+    <div class="price-box">
+        <h2>Wash, Fold & Iron</h2>
+        <p>• Small basket — R140</p>
+        <p>• Medium basket — R180</p>
+        <p>• Large basket — R230</p>
+    </div>
+
+    <a href="laundry-prices.pdf" download class="download-btn">📄 Download Laundry Price PDF</a>
+
+</div>
+
 <footer class="footer">
     <div class="footer-grid">
         <div>
@@ -85,5 +114,6 @@ body {
         </div>
     </div>
 </footer>
+
 </body>
 </html>
