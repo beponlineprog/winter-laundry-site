@@ -6,105 +6,65 @@
 <title>Services – Cozy Threads</title>
 
 <style>
-/* =================== GLOBAL =================== */
+/* ========= GLOBAL ========= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f7f3e9;
     color: #4a3f35;
-    line-height: 1.6;
 }
 
-/* =================== NAVBAR =================== */
-.navbar {
-    background: #d8c3a5;
-    padding: 15px 25px;
-    display: flex;
+/* ========= NAVBAR ========= */
+.navbar { 
+    background: #d8c3a5; 
+    padding: 15px 25px; 
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
+.navbar .logo { font-weight: bold; font-size: 1.4rem; }
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { color: #4a3f35; text-decoration: none; font-weight: bold; }
+.active { border-bottom: 2px solid #4a3f35; }
 
-.navbar .logo {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color: #4a3f35;
+/* ========= HEADER ========= */
+.page-header { 
+    text-align: center; 
+    padding: 50px 20px; 
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    color: #4a3f35;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: #6b4f37;
-}
-
-.active {
-    border-bottom: 2px solid #4a3f35;
-}
-
-/* =================== PAGE HEADER =================== */
-.page-header {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-/* =================== CONTAINER =================== */
-.about-container {
-    max-width: 1100px;
+/* ========= GRID ========= */
+.services-grid {
+    max-width: 1200px;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 25px;
     padding: 20px;
 }
 
-/* =================== CARDS =================== */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.card {
+/* ========= CARDS ========= */
+.service-card {
     background: #fff8ee;
     padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-left: 6px solid #b4846c;
-    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
+.service-card h2 { color: #6b4f37; margin-bottom: 5px; }
+.service-card p { line-height: 1.6; }
 
-.card h2, .card h3 {
-    color: #6b4f37;
-}
-
-/* =================== BUTTON WRAPPER =================== */
-.button-wrap {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
+/* ========= BUTTONS ========= */
 .price-btn {
-    display: inline-block;
-    padding: 12px 22px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
     background: #b4846c;
     color: white;
     text-decoration: none;
+    text-align: center;
     border-radius: 10px;
     font-weight: bold;
     transition: 0.3s ease;
@@ -115,35 +75,25 @@ body {
     transform: scale(1.05);
 }
 
-/* =================== FOOTER =================== */
+/* ========= FOOTER ========= */
 .footer {
     background: #d8c3a5;
-    padding: 50px 20px;
-    margin-top: 60px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.footer h3 {
-    margin-bottom: 10px;
+    padding: 40px 20px;
+    margin-top: 50px;
     color: #4a3f35;
 }
-
-.footer p {
-    margin: 6px 0;
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
 }
+.footer h3 { margin-bottom: 10px; }
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- =================== NAVBAR =================== -->
+<!-- ========= NAVBAR ========= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
@@ -155,68 +105,94 @@ body {
     </ul>
 </nav>
 
-<!-- =================== HEADER =================== -->
-<section class="page-header">
-    <h1>Our Services</h1>
-    <p>Affordable, professional and convenient laundry care.</p>
-</section>
-
-<!-- =================== SERVICES CONTENT =================== -->
-<div class="about-container">
-
-    <div class="cards">
-
-        <!-- WASHING -->
-        <div class="card">
-            <h2>Washing Services</h2>
-            <p>Complete washing service with premium detergents that care for your clothing and maintain fabric quality.</p>
-
-            <div class="button-wrap">
-                <a href="booking.html" class="price-btn">Book Now</a>
-                <a href="#" class="price-btn">Price List</a>
-            </div>
-        </div>
-
-        <!-- IRONING -->
-        <div class="card">
-            <h2>Ironing</h2>
-            <p>Get perfectly pressed clothing with our professional ironing service.</p>
-
-            <div class="button-wrap">
-                <a href="booking.html" class="price-btn">Book Now</a>
-                <a href="#" class="price-btn">Price List</a>
-            </div>
-        </div>
-
-        <!-- WASH & IRON -->
-        <div class="card">
-            <h2>Wash & Iron</h2>
-            <p>Complete package: washing, drying and ironing for a fresh, clean and ready-to-wear finish.</p>
-
-            <div class="button-wrap">
-                <a href="booking.html" class="price-btn">Book Now</a>
-                <a href="#" class="price-btn">Price List</a>
-            </div>
-        </div>
-
-        <!-- BLANKETS -->
-        <div class="card">
-            <h2>Blankets & Bedding</h2>
-            <p>We clean heavy items like blankets, duvets, throws and comforters with care.</p>
-
-            <div class="button-wrap">
-                <a href="booking.html" class="price-btn">Book Now</a>
-                <a href="#" class="price-btn">Price List</a>
-            </div>
-        </div>
-
-    </div>
+<!-- ========= HEADER ========= -->
+<div class="page-header">
+    <h1>Our Services & Prices</h1>
+    <p>Affordable • Reliable • Comfortable</p>
 </div>
 
-<!-- =================== FOOTER =================== -->
+<!-- ========= SERVICES GRID ========= -->
+<div class="services-grid">
+
+    <!-- ========== LAUNDRY: WASH ONLY ========== -->
+    <div class="service-card">
+        <h2>Wash Only</h2>
+        <p>Clothes washed clean and fresh.</p>
+
+        <a class="price-btn">Small Basket – R90</a>
+        <a class="price-btn">Medium Basket – R120</a>
+        <a class="price-btn">Large Basket – R160</a>
+    </div>
+
+    <!-- ========== LAUNDRY: WASH & FOLD ========== -->
+    <div class="service-card">
+        <h2>Wash & Fold</h2>
+        <p>Washed and folded neatly for convenience.</p>
+
+        <a class="price-btn">Small Basket – R110</a>
+        <a class="price-btn">Medium Basket – R150</a>
+        <a class="price-btn">Large Basket – R200</a>
+    </div>
+
+    <!-- ========== LAUNDRY: WASH, FOLD & IRON ========== -->
+    <div class="service-card">
+        <h2>Wash, Fold & Iron</h2>
+        <p>Complete care — washed, folded, and ironed.</p>
+
+        <a class="price-btn">Small Basket – R140</a>
+        <a class="price-btn">Medium Basket – R180</a>
+        <a class="price-btn">Large Basket – R230</a>
+    </div>
+
+    <!-- ========== WINTER: BEANIES ========== -->
+    <div class="service-card">
+        <h2>Beanies</h2>
+        <p>Warm, soft, and comfortable winter beanies.</p>
+
+        <a class="price-btn">R30 Each</a>
+        <a class="price-btn">R75 for 3</a>
+    </div>
+
+    <!-- ========== WINTER: GLOVES ========== -->
+    <div class="service-card">
+        <h2>Warm Gloves</h2>
+        <p>Cozy gloves to keep your hands warm.</p>
+
+        <a class="price-btn">R20 Each</a>
+        <a class="price-btn">R50 for 3</a>
+    </div>
+
+    <!-- ========== WINTER: NO-SHOW SOCKS ========== -->
+    <div class="service-card">
+        <h2>No-Show Socks</h2>
+        <p>Comfortable and stylish for everyday wear.</p>
+
+        <a class="price-btn">R20 Each</a>
+        <a class="price-btn">R50 for 3</a>
+    </div>
+
+    <!-- ========== WINTER: MEDIUM WARM SOCKS ========== -->
+    <div class="service-card">
+        <h2>Medium Warm Socks</h2>
+        <p>Thick socks for warmth and comfort.</p>
+
+        <a class="price-btn">R30 Each</a>
+        <a class="price-btn">R75 for 3</a>
+    </div>
+
+    <!-- ========== UMBRELLA ========== -->
+    <div class="service-card">
+        <h2>Umbrella</h2>
+        <p>Perfect protection for rainy days.</p>
+
+        <a class="price-btn">R65</a>
+    </div>
+
+</div>
+
+<!-- ========= FOOTER ========= -->
 <footer class="footer">
     <div class="footer-grid">
-
         <div>
             <h3>Contact Us</h3>
             <p>📞 078 819 0578</p>
@@ -230,7 +206,6 @@ body {
             <p>Affordable • Reliable • Comfortable</p>
             <p>© 2026 Cozy Threads — All Rights Reserved</p>
         </div>
-
     </div>
 </footer>
 
