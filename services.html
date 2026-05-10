@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services – Cozy Threads</title>
-
-<style>
+<title>Services – Cozy Threads</title><style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,7 +10,6 @@ body {
     color: #4a3f35;
 }
 
-/* ================= NAVBAR ================= */
 .navbar {
     background: #d8c3a5;
     padding: 15px 25px;
@@ -27,7 +23,7 @@ body {
     font-size: 1.4rem;
 }
 
-.navbar .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -35,37 +31,33 @@ body {
     padding: 0;
 }
 
-.navbar .nav-links a {
+.nav-links a {
     color: #4a3f35;
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar .active {
+.active {
     border-bottom: 2px solid #4a3f35;
 }
 
-/* ================= HEADER ================= */
 .page-header {
     text-align: center;
     padding: 60px 20px;
 }
 
-/* ================= SECTION WRAPPER ================= */
 .about-container {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
 
-/* ================= CARD GRID ================= */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
 }
 
-/* ================= CARD ================= */
 .card {
     background: #fff8ee;
     padding: 25px;
@@ -79,34 +71,37 @@ body {
     transform: translateY(-5px);
 }
 
-/* Titles */
-.card h2 {
-    color: #6b4f37;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    margin-top: 15px;
-    font-size: 1.05rem;
+.card h2, .card h3 {
     color: #6b4f37;
 }
 
-/* Paragraphs */
 .card p {
-    margin-top: 5px;
     line-height: 1.6;
 }
 
-/* ================= FOOTER ================= */
+.price-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: #b4846c;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.price-btn:hover {
+    background: #6b4f37;
+    transform: scale(1.05);
+}
+
 .footer {
     background: #d8c3a5;
     padding: 50px 20px;
-    color: #4a3f35;
-    border-top: 4px solid #b4846c;
     margin-top: 60px;
 }
 
-/* 2 COLUMN FOOTER */
 .footer-columns {
     max-width: 1100px;
     margin: auto;
@@ -115,137 +110,77 @@ body {
     gap: 40px;
 }
 
-/* COLUMN STYLE */
-.footer-col h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.footer-col p {
-    margin: 6px 0;
-}
-
-/* BRAND */
-.footer-col .brand {
+.brand {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
-.footer-col .tagline {
+.tagline {
     font-style: italic;
 }
 
-.footer-col .extras {
-    font-weight: bold;
-    margin-top: 8px;
-}
-
-/* COPYRIGHT */
-.footer .copyright {
+.copyright {
     text-align: center;
     margin-top: 30px;
-    font-size: 0.9rem;
-    opacity: 0.7;
 }
 
-/* MOBILE */
 @media (max-width: 700px) {
     .footer-columns {
         grid-template-columns: 1fr;
         text-align: center;
     }
 }
-</style>
-</head>
-
-<body>
-
-<nav class="navbar">
-    <div class="logo">Cozy Threads</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<header class="page-header">
-    <h1>Our Services</h1>
-    <p>Warmth, comfort & clean clothes — all in one place</p>
-</header>
-
-<section class="about-container">
-
-    <div class="cards">
-
-        <!-- LAUNDRY SERVICES -->
-        <div class="card">
-            <h2>🧺 Laundry Services</h2>
-
-            <h3>1. Wash Only</h3>
-            <p>Fast and affordable washing service. We clean your clothes and return them fresh and ready to wear.</p>
-
-            <h3>2. Wash & Fold</h3>
-            <p>Your laundry is washed, dried, and neatly folded for easy storage and convenience.</p>
-
-            <h3>3. Wash, Fold & Iron</h3>
-            <p>Complete premium service where your clothes are washed, folded, and ironed to perfection.</p>
-
-            <h3>📍 Call-Out Service</h3>
-            <p>We collect and deliver your laundry to your doorstep for maximum convenience and comfort.</p>
-        </div>
-
-        <!-- WINTER ESSENTIALS -->
-        <div class="card">
-            <h2>❄ Winter Essentials</h2>
-
-            <h3>1. Warm Comfortable Beanies</h3>
-            <p>Soft and warm beanies designed to keep you comfortable during cold weather.</p>
-
-            <h3>2. Comfortable Socks</h3>
-            <p>
-                a. No-show socks – light, breathable, and discreet<br>
-                b. Normal socks – everyday comfort and durability<br>
-                c. Long socks – extra warmth and protection
-            </p>
-
-            <h3>3. Warm Gloves</h3>
-            <p>Soft and insulated gloves to keep your hands warm and protected in cold conditions.</p>
-
-            <h3>4. Umbrellas</h3>
-            <p>Strong and reliable umbrellas to protect you from rain and harsh weather conditions.</p>
-        </div>
-
-    </div>
-
-</section>
-<footer class="footer">
-
-    <div class="footer-columns">
-
-        <!-- LEFT COLUMN -->
-        <div class="footer-col">
-            <h3>Contact Us</h3>
-            <p>📞 078 819 0578</p>
-            <p>✉ thulim.belina@gmail.com</p>
-            <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="footer-col">
-            <h2 class="brand">Cozy Threads</h2>
-            <p class="tagline">Where Clean Clothes Meet Winter Warmth.</p>
-            <p class="extras">Affordable • Reliable • Comfortable</p>
-        </div>
-
-    </div>
-
-    <p class="copyright">
-        © 2026 Cozy Threads — All Rights Reserved
-    </p>
-
-</footer>
-</body>
+</style></head>
+<body><nav class="navbar">
+<div class="logo">Cozy Threads</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a class="active" href="services.html">Services</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav><header class="page-header">
+<h1>Our Services</h1>
+<p>Warmth, comfort & clean clothes — all in one place</p>
+</header><section class="about-container">
+<div class="cards"><div class="card">
+<h2>🧺 Laundry Services</h2>
+<h3>1. Wash Only</h3>
+<p>Fast and affordable washing service.</p>
+<h3>2. Wash & Fold</h3>
+<p>Neatly folded for convenience.</p>
+<h3>3. Wash, Fold & Iron</h3>
+<p>Premium complete laundry care.</p>
+<h3>📍 Call-Out Service</h3>
+<p>Collection and delivery to your doorstep.</p>
+<a href="laundry-price-list.html" class="price-btn">View Laundry Price List</a>
+</div><div class="card">
+<h2>❄ Winter Essentials</h2>
+<h3>1. Warm Beanies</h3>
+<p>Soft and warm winter comfort.</p>
+<h3>2. Comfortable Socks</h3>
+<p>No-show, normal & long socks available.</p>
+<h3>3. Warm Gloves</h3>
+<p>Keep your hands protected.</p>
+<h3>4. Umbrellas</h3>
+<p>Reliable weather protection.</p>
+<a href="winter-price-list.html" class="price-btn">View Winter Essentials Price List</a>
+</div></div>
+</section><footer class="footer">
+<div class="footer-columns">
+<div>
+<h3>Contact Us</h3>
+<p>📞 078 819 0578</p>
+<p>✉ thulim.belina@gmail.com</p>
+<p>📍 35446 Ndumo Street, Etwatwa 1519</p>
+</div>
+<div>
+<h2 class="brand">Cozy Threads</h2>
+<p class="tagline">Where Clean Clothes Meet Winter Warmth.</p>
+<p>Affordable • Reliable • Comfortable</p>
+</div>
+</div>
+<p class="copyright">© 2026 Cozy Threads — All Rights Reserved</p>
+</footer></body>
 </html>
