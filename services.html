@@ -6,16 +6,14 @@
 <title>Services – Cozy Threads</title>
 
 <style>
-/* =================== GLOBAL =================== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f7f3e9;
     color: #4a3f35;
-    line-height: 1.6;
 }
 
-/* =================== NAVBAR =================== */
+/* NAVBAR */
 .navbar {
     background: #d8c3a5;
     padding: 15px 25px;
@@ -33,8 +31,6 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links a {
@@ -47,24 +43,20 @@ body {
     color: #6b4f37;
 }
 
-.active {
-    border-bottom: 2px solid #4a3f35;
-}
-
-/* =================== HEADER =================== */
+/* HEADER */
 .page-header {
     text-align: center;
     padding: 60px 20px;
 }
 
-/* =================== CARDS =================== */
+/* CARDS */
 .cards {
     max-width: 1100px;
     margin: auto;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
+    padding: 20px;
 }
 
 .card {
@@ -75,38 +67,23 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* =================== BUTTON =================== */
-.toggle-btn {
+/* BUTTON */
+.btn {
+    display: inline-block;
     margin-top: 15px;
     padding: 12px 18px;
     background: #b4846c;
     color: white;
-    border: none;
+    text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
-    cursor: pointer;
-    width: 100%;
 }
 
-.toggle-btn:hover {
+.btn:hover {
     background: #6b4f37;
 }
 
-/* =================== PRICE BOX (FIXED) =================== */
-.price-box {
-    display: none;
-    margin-top: 15px;
-    background: #f2e8dc;
-    padding: 15px;
-    border-radius: 10px;
-    border-left: 4px solid #b4846c;
-}
-
-.price-box.show {
-    display: block;
-}
-
-/* =================== FOOTER =================== */
+/* FOOTER */
 .footer {
     background: #d8c3a5;
     padding: 40px 20px;
@@ -117,22 +94,16 @@ body {
     max-width: 1100px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-
-.footer h3 {
-    margin-bottom: 10px;
-}
 </style>
-
 </head>
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
-
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -142,59 +113,27 @@ body {
     </ul>
 </nav>
 
-<!-- ================= HEADER ================= -->
 <header class="page-header">
     <h1>Our Services</h1>
     <p>Affordable • Reliable • Comfortable</p>
 </header>
 
-<!-- ================= SERVICES ================= -->
-<div class="cards">
+<section class="cards">
 
-    <!-- LAUNDRY -->
     <div class="card">
         <h2>🧺 Laundry Services</h2>
-        <p>Professional laundry care for all basket sizes.</p>
-
-        <button class="toggle-btn" onclick="toggleBox('laundryBox')">
-            Laundry Price List
-        </button>
-
-        <div id="laundryBox" class="price-box">
-            <p><strong>Wash Only</strong></p>
-            <p>Small R90 | Medium R120 | Large R160</p>
-
-            <p><strong>Wash & Fold</strong></p>
-            <p>Small R110 | Medium R150 | Large R200</p>
-
-            <p><strong>Wash, Fold & Iron</strong></p>
-            <p>Small R140 | Medium R180 | Large R230</p>
-        </div>
+        <p>Professional washing for all basket sizes.</p>
+        <a class="btn" href="laundry-prices.html">Laundry Price List</a>
     </div>
 
-    <!-- WINTER -->
     <div class="card">
         <h2>❄ Winter Essentials</h2>
-        <p>Warm and affordable winter clothing items.</p>
-
-        <button class="toggle-btn" onclick="toggleBox('winterBox')">
-            Winter Price List
-        </button>
-
-        <div id="winterBox" class="price-box">
-
-            <p><strong>Beanies</strong> R30 each | R75 for 3</p>
-            <p><strong>Gloves</strong> R20 each | R50 for 3</p>
-            <p><strong>Medium Socks</strong> R30 each | R75 for 3</p>
-            <p><strong>No-Show Socks</strong> R20 each | R50 for 3</p>
-            <p><strong>Umbrella</strong> R65 each</p>
-
-        </div>
+        <p>Warm clothing for cold weather comfort.</p>
+        <a class="btn" href="winter-prices.html">Winter Price List</a>
     </div>
 
-</div>
+</section>
 
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="footer-grid">
 
@@ -209,19 +148,11 @@ body {
             <h3>Cozy Threads</h3>
             <p>Where Clean Clothes Meet Winter Warmth.</p>
             <p>Affordable • Reliable • Comfortable</p>
-            <p>© 2026 Cozy Threads — All Rights Reserved</p>
+            <p>© 2026 Cozy Threads</p>
         </div>
 
     </div>
 </footer>
-
-<!-- ================= SCRIPT (FIXED) ================= -->
-<script>
-function toggleBox(id) {
-    const box = document.getElementById(id);
-    box.classList.toggle("show");
-}
-</script>
 
 </body>
 </html>
