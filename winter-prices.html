@@ -1,74 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Winter Prices</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter Essentials Price List – Cozy Threads</title>
 
 <style>
 body {
-    font-family: Arial;
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #f7f3e9;
     color: #4a3f35;
+}
+
+/* HEADER */
+.page-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #d8c3a5;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
     padding: 20px;
 }
 
-.box {
-    max-width: 600px;
-    margin: auto;
+.price-box {
     background: #fff8ee;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
+    margin-bottom: 25px;
     border-left: 6px solid #b4846c;
 }
 
-.btn {
+/* BUTTON */
+.download-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
+    padding: 12px 20px;
     background: #b4846c;
     color: white;
+    border-radius: 10px;
+    margin-top: 20px;
     text-decoration: none;
-    border-radius: 8px;
+    font-weight: bold;
 }
-    .footer {
-    background: #d8c3a5;
-    padding: 50px 20px;
-    color: #4a3f35;
-    border-top: 4px solid #b4846c;
-    margin-top: 50px;
+.download-btn:hover {
+    background: #6b4f37;
 }
 
+/* FOOTER */
+.footer {
+    background: #d8c3a5;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
 .footer-grid {
-    max-width: 1100px;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 25px;
 }
-
-.footer-grid h3 {
-    margin-bottom: 10px;
-    color: #4a3f35;
-}
-
-.footer-grid p {
-    margin: 5px 0;
-}
+.footer h3 { margin-top: 0; }
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="box">
-<h2>❄ Winter Price List</h2>
-
-<p><strong>Beanies:</strong> R30 each | R75 for 3</p>
-<p><strong>Gloves:</strong> R20 each | R50 for 3</p>
-<p><strong>Medium Socks:</strong> R30 each | R75 for 3</p>
-<p><strong>No-Show Socks:</strong> R20 each | R50 for 3</p>
-<p><strong>Umbrella:</strong> R65 each</p>
-
-<a class="btn" href="services.html">⬅ Back</a>
+<div class="page-header">
+    <h1>Winter Essentials Price List</h1>
 </div>
+
+<div class="container">
+
+    <div class="price-box">
+        <h2>Beanies</h2>
+        <p>• R30 each</p>
+        <p>• R75 for 3</p>
+    </div>
+
+    <div class="price-box">
+        <h2>Gloves</h2>
+        <p>• R20 each</p>
+        <p>• R50 for 3</p>
+    </div>
+
+    <div class="price-box">
+        <h2>Medium Warm Socks</h2>
+        <p>• R30 each</p>
+        <p>• R75 for 3</p>
+    </div>
+
+    <div class="price-box">
+        <h2>No-Show Socks</h2>
+        <p>• R20 each</p>
+        <p>• R50 for 3</p>
+    </div>
+
+    <div class="price-box">
+        <h2>Umbrella</h2>
+        <p>• R65</p>
+    </div>
+
+    <a href="winter-prices.pdf" download class="download-btn">📄 Download Winter Price PDF</a>
+
+</div>
+
 <footer class="footer">
     <div class="footer-grid">
         <div>
@@ -86,5 +122,6 @@ body {
         </div>
     </div>
 </footer>
+
 </body>
 </html>
