@@ -6,8 +6,7 @@
 <title>Booking – Cozy Threads</title>
 
 <style>
-
-/* ================= BASE ================= */
+/* ================= GENERAL THEME ================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,134 +14,139 @@ body {
     color: #4a3f35;
 }
 
-/* ================= NAVBAR ================= */
 .navbar {
     background: #d8c3a5;
     padding: 15px 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
+.navbar .logo { font-weight: bold; }
+.navbar a { color: #4a3f35; text-decoration: none; font-weight: bold; }
+.navbar .nav-links { display: flex; list-style: none; gap: 20px; }
+.navbar .active { border-bottom: 2px solid #4a3f35; }
 
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #4a3f35;
-    font-weight: bold;
-}
-
-.navbar .active {
-    border-bottom: 2px solid #4a3f35;
-}
-
-/* ================= HEADER ================= */
 .page-header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
-/* ================= BUTTON CARDS ================= */
+/* ================= BOOKING NOTE ================= */
+.booking-note {
+    max-width: 900px;
+    background: #fff8ee;
+    margin: 20px auto;
+    padding: 25px;
+    border-left: 6px solid #b4846c;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.booking-note h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #6b4f37;
+}
+.booking-note p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* ================= LAYOUT ================= */
 .booking-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
 }
 
 .card-box {
     background: #fff8ee;
-    padding: 25px;
+    padding: 20px;
     border-radius: 14px;
     border-left: 6px solid #b4846c;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.card-box h2 { margin-bottom: 8px; color: #6b4f37; }
+.card-box p { margin-bottom: 15px; }
+
+/* Buttons */
 .btn-primary {
-    display: inline-block;
-    padding: 12px 16px;
-    background: #b4846c;
-    color: white !important;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* ================= FORMS ================= */
-.form-section {
-    max-width: 800px;
-    margin: 40px auto;
-    background: #fff8ee;
-    padding: 25px;
-    border-radius: 14px;
-    border-left: 6px solid #b4846c;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: none;       /* HIDDEN BY DEFAULT */
-    opacity: 0;
-    transition: 0.4s;
-}
-
-.form-section.show {
     display: block;
-    opacity: 1;
-    margin-top: 20px;
+    width: 100%;
+    background: #b4846c;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn-primary:hover { background: #8a644d; }
+
+/* ================= HIDDEN FORMS ================= */
+.hidden-form {
+    display: none;
+    margin-top: 15px;
 }
 
 form label {
-    display: block;
-    margin-top: 15px;
     font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
 }
-
 form input, form select, form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #b7a693;
-    border-radius: 6px;
-    margin-top: 5px;
-    background: #f9f5ef;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #bfaea0;
+    background: #fff;
 }
 
 form button {
-    margin-top: 20px;
-    padding: 12px 18px;
     background: #6b4f37;
     color: white;
+    padding: 12px;
+    width: 100%;
     border: none;
     border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
+    font-weight: bold;
 }
 
-h3 {
-    margin-top: 25px;
-    color: #6b4f37;
-}
+form button:hover { background: #523b29; }
 
 /* ================= FOOTER ================= */
 .footer {
     background: #d8c3a5;
     padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #b4846c;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 20px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
-.footer p, .footer h3 {
-    margin: 5px 0;
-}
-
+.footer h3 { margin-bottom: 10px; color: #4a3f35; }
+.footer p { margin: 5px 0; }
 </style>
-</head>
 
+<script>
+function toggleForm(id) {
+    let form = document.getElementById(id);
+    form.style.display = (form.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
@@ -160,167 +164,140 @@ h3 {
 <!-- ================= HEADER ================= -->
 <header class="page-header">
     <h1>Bookings</h1>
-    <p>Choose your service and submit your details easily</p>
+    <p>Simple, quick and convenient bookings & orders</p>
 </header>
 
-<!-- ================= BOOKING CARDS ================= -->
-<div class="booking-container">
-
-    <div class="card-box">
-        <h2>🧺 Laundry Booking</h2>
-        <p>Professional wash, fold & iron service</p>
-        <span onclick="showForm('laundryForm')" class="btn-primary">Book Laundry</span>
-    </div>
-
-    <div class="card-box">
-        <h2>❄ Winter Essentials</h2>
-        <p>Order warm & comfortable items</p>
-        <span onclick="showForm('winterForm')" class="btn-primary">Order Winter Items</span>
-    </div>
-
-</div>
-
-<!-- ================= LAUNDRY FORM ================= -->
-<section id="laundryForm" class="form-section">
-
-    <h2>🧺 Laundry Booking Form</h2>
-
-    <form>
-
-        <label>Name</label>
-        <input type="text" required>
-
-        <label>Surname</label>
-        <input type="text" required>
-
-        <label>WhatsApp Number</label>
-        <input type="tel" required>
-
-        <label>Category</label>
-        <select required>
-            <option value="">Select service</option>
-            <option>Wash Only</option>
-            <option>Wash & Fold</option>
-            <option>Wash, Fold & Iron</option>
-        </select>
-
-        <label>Basket Size</label>
-        <select required>
-            <option value="">Select basket</option>
-            <option>Small Basket</option>
-            <option>Medium Basket</option>
-            <option>Large Basket</option>
-        </select>
-
-        <label>Special Note (Optional)</label>
-        <textarea rows="3"></textarea>
-
-        <button type="submit">Submit Laundry Booking</button>
-
-    </form>
-
+<!-- ================= BOOKING NOTE (INSERTED) ================= -->
+<section class="booking-note">
+    <h2>Welcome to Cozy Threads Bookings</h2>
+    <p>
+        We’ve made it simple and convenient for you to place your laundry bookings 
+        and winter essentials orders. Just fill in a quick form below, and we’ll 
+        confirm your request via WhatsApp. Fast • Easy • Reliable.
+    </p>
 </section>
 
-<!-- ================= WINTER FORM ================= -->
-<section id="winterForm" class="form-section">
+<!-- ================= BOOKING SECTION ================= -->
+<section class="booking-container">
 
-    <h2>❄ Winter Essentials Order Form</h2>
+    <!-- ================= LAUNDRY ================= -->
+    <div class="card-box">
+        <h2>🧺 Laundry Booking</h2>
+        <p>Book your preferred laundry service easily.</p>
 
-    <form>
+        <a class="btn-primary" onclick="toggleForm('laundryForm')">Book Laundry</a>
 
-        <label>Name</label>
-        <input type="text" required>
+        <form id="laundryForm" class="hidden-form">
+            <label>Name</label>
+            <input type="text" required>
 
-        <label>Surname</label>
-        <input type="text" required>
+            <label>Surname</label>
+            <input type="text" required>
 
-        <label>WhatsApp Number</label>
-        <input type="tel" required>
+            <label>WhatsApp Number</label>
+            <input type="text" required>
 
-        <!-- SOCKS -->
-        <h3>Socks</h3>
+            <label>Category</label>
+            <select required>
+                <option>Wash Only</option>
+                <option>Wash & Fold</option>
+                <option>Wash, Fold & Iron</option>
+            </select>
 
-        <label>Type</label>
-        <select multiple>
-            <option>No-Show Socks</option>
-            <option>Normal Socks</option>
-            <option>Long Socks</option>
-        </select>
+            <label>Basket Size</label>
+            <select required>
+                <option>Small Basket</option>
+                <option>Medium Basket</option>
+                <option>Large Basket</option>
+            </select>
 
-        <label>Colour</label>
-        <select multiple>
-            <option>White</option>
-            <option>Blue</option>
-            <option>Black</option>
-            <option>Maroon</option>
-            <option>Grey</option>
-        </select>
+            <label>Special Note (Optional)</label>
+            <textarea rows="3"></textarea>
 
-        <label>Quantity</label>
-        <input type="number" min="1">
+            <button type="submit">Submit Laundry Booking</button>
+        </form>
+    </div>
 
-        <!-- BEANIES -->
-        <h3>Beanies</h3>
+    <!-- ================= WINTER ESSENTIALS ================= -->
+    <div class="card-box">
+        <h2>❄ Winter Essentials Order</h2>
+        <p>Order warm items for the season.</p>
 
-        <label>Colour</label>
-        <select multiple>
-            <option>White</option>
-            <option>Blue</option>
-            <option>Black</option>
-            <option>Maroon</option>
-            <option>Grey</option>
-        </select>
+        <a class="btn-primary" onclick="toggleForm('winterForm')">Place Order</a>
 
-        <label>Quantity</label>
-        <input type="number" min="1">
+        <form id="winterForm" class="hidden-form">
+            <label>Name</label>
+            <input type="text" required>
 
-        <!-- GLOVES -->
-        <h3>Gloves</h3>
+            <label>Surname</label>
+            <input type="text" required>
 
-        <label>Colour</label>
-        <select multiple>
-            <option>White</option>
-            <option>Blue</option>
-            <option>Black</option>
-            <option>Maroon</option>
-            <option>Grey</option>
-        </select>
+            <label>WhatsApp Number</label>
+            <input type="text" required>
 
-        <label>Quantity</label>
-        <input type="number" min="1">
+            <label>Sock Type</label>
+            <select multiple>
+                <option>No-Show Socks</option>
+                <option>Normal Socks</option>
+                <option>Long Socks</option>
+            </select>
 
-        <button type="submit">Submit Winter Order</button>
+            <label>Sock Colour</label>
+            <select multiple>
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Maroon</option>
+                <option>Grey</option>
+            </select>
 
-    </form>
+            <label>Beanie Colour</label>
+            <select multiple>
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Maroon</option>
+                <option>Grey</option>
+            </select>
+
+            <label>Glove Colour</label>
+            <select multiple>
+                <option>White</option>
+                <option>Blue</option>
+                <option>Black</option>
+                <option>Maroon</option>
+                <option>Grey</option>
+            </select>
+
+            <label>Quantity</label>
+            <input type="number" min="1" required>
+
+            <button type="submit">Submit Winter Order</button>
+        </form>
+    </div>
 
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
-    <div>
-        <h3>Contact Us</h3>
-        <p>📞 078 819 0578</p>
-        <p>✉ thulim.belina@gmail.com</p>
-        <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
-    </div>
+    <div class="footer-grid">
 
-    <div>
-        <h3>Cozy Threads</h3>
-        <p>Where Clean Clothes Meet Winter Warmth.</p>
-        <p>Affordable • Reliable • Comfortable</p>
-        <p>© 2026 Cozy Threads — All Rights Reserved</p>
+        <div>
+            <h3>Contact Us</h3>
+            <p>📞 078 819 0578</p>
+            <p>✉ thulim.belina@gmail.com</p>
+            <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
+        </div>
+
+        <div>
+            <h3>Cozy Threads</h3>
+            <p>Where Clean Clothes Meet Winter Warmth.</p>
+            <p>Affordable • Reliable • Comfortable</p>
+            <p>© 2026 Cozy Threads — All Rights Reserved</p>
+        </div>
+
     </div>
 </footer>
-
-<!-- ================= JS: SHOW FORM ================= -->
-<script>
-function showForm(id) {
-    document.getElementById("laundryForm").classList.remove("show");
-    document.getElementById("winterForm").classList.remove("show");
-    document.getElementById(id).classList.add("show");
-    window.scrollTo({ top: document.getElementById(id).offsetTop - 20, behavior: "smooth" });
-}
-</script>
 
 </body>
 </html>
