@@ -4,151 +4,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Services – Cozy Threads</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f7f3e9;
-    color: #4a3f35;
-}
-
-/* NAVBAR */
-.navbar {
-    background: #d8c3a5;
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar .logo {
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #4a3f35;
-}
-
-.nav-links a:hover {
-    color: #6b4f37;
-}
-
-/* HEADER */
-.page-header {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-/* CARDS */
-.cards {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px;
-}
-
-.card {
-    background: #fff8ee;
-    padding: 25px;
-    border-radius: 14px;
-    border-left: 6px solid #b4846c;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 18px;
-    background: #b4846c;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background: #6b4f37;
-}
-
-/* FOOTER */
-.footer {
-    background: #d8c3a5;
-    padding: 40px 20px;
-    margin-top: 60px;
-}
-
-.footer-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
     <div class="logo">Cozy Threads</div>
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a class="active" href="services.html">Services</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="booking.html">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
+
+<!-- ================= HEADER ================= -->
 <header class="page-header">
     <h1>Our Services</h1>
-    <p>Affordable • Reliable • Comfortable</p>
 </header>
 
-<section class="cards">
 
-    <div class="card">
-        <h2>🧺 Laundry Services</h2>
-        <p>Professional washing for all basket sizes.</p>
-        <a class="btn" href="laundry-prices.html">Laundry Price List</a>
+<!-- ================= SERVICE SECTIONS ================= -->
+<section class="service-boxes">
+
+    <!-- Laundry Service -->
+    <div class="service-card">
+        <h2>Laundry Services</h2>
+        <p>Professional washing, drying, ironing and folding.</p>
+        <a href="laundry.html" class="btn">View Laundry Services</a>
+
+        <!-- PDF Link -->
+        <a href="laundry-prices.pdf" class="pdf-download" download>
+            Download Laundry Price List (PDF)
+        </a>
     </div>
 
-    <div class="card">
-        <h2>❄ Winter Essentials</h2>
-        <p>Warm clothing for cold weather comfort.</p>
-        <a class="btn" href="winter-prices.html">Winter Price List</a>
+    <!-- Winter Essentials -->
+    <div class="service-card">
+        <h2>Winter Essentials</h2>
+        <p>Blankets, jackets, duvets and heavy-wear cleaning.</p>
+        <a href="winter.html" class="btn">View Winter Essentials</a>
+
+        <!-- PDF Link -->
+        <a href="winter-prices.pdf" class="pdf-download" download>
+            Download Winter Essentials Price List (PDF)
+        </a>
     </div>
 
 </section>
 
-<footer class="footer">
-    <div class="footer-grid">
 
-        <div>
-            <h3>Contact Us</h3>
-            <p>📞 078 819 0578</p>
-            <p>✉ thulim.belina@gmail.com</p>
-            <p>📍 35446 Ndumo Street, Etwatwa 1519</p>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
         </div>
 
-        <div>
-            <h3>Cozy Threads</h3>
-            <p>Where Clean Clothes Meet Winter Warmth.</p>
-            <p>Affordable • Reliable • Comfortable</p>
-            <p>© 2026 Cozy Threads</p>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>35446 Ndumo Street<br>Etwatwa</p>
+            <p>Phone: 065 657 4523</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Hours</h3>
+            <p>Mon – Fri: 8AM – 6PM</p>
+            <p>Saturday: 8AM – 4PM</p>
         </div>
 
     </div>
